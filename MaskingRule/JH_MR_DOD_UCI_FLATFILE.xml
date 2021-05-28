@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_DOD_UCI_FLATFILE" description="Rule to handle diff dod 19240700, 11/12/2017, 4/4/2017, 3/30/2017 formats">
+    <RulePort dataType="String" order="5" scale="4" precision="4" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(IN_DOD,INSTR(IN_DOD,'/',1,2)+1,LENGTH(IN_DOD)-INSTR(IN_DOD,'/',1,2))" name="VAR_YYYY_MMDDYYYY"/>
+    <RulePort dataType="String" order="1" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(IN_DOD,-2,2)" name="VAR_DD_YYYYMMDD"/>
+    <RulePort dataType="String" order="6" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LPAD(TO_CHAR(DECODE(TO_INTEGER(VAR_DD_YYYYMMDD),01,11,02,12,03,13,04,14,05,15,06,16,07,17,08,18,09,19,10,20,11,21,12,22,13,23,14,24,15,25,16,26,17,27,18,28,19,01,20,02,21,03,22,04,23,05,24,06,25,07,26,08,27,09,28,10,29,21,30,22,31,23,00,00)),2,'0')" name="VAR_DECODE_DD_YYYYMMDD"/>
+    <RulePort dataType="String" order="9" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="CONCAT(CONCAT(CONCAT(CONCAT(VAR_MM_MMDDYYYY,'/'),VAR_DECODE_DD_MMDDYYYY),'/'),VAR_YYYY_MMDDYYYY)" name="VAR_CONCAT_DOD_MMDDYYYY"/>
+    <RulePort dataType="String" order="10" scale="10" precision="10" length="0" mandatory="true" portType="OUTPUT" expression="IIF(LENGTH(LTRIM(RTRIM(IN_DOD)))=0 OR ISNULL(IN_DOD),IN_DOD,IIF(INSTR(IN_DOD,'/')>0,VAR_CONCAT_DOD_MMDDYYYY,VAR_CONCAT_DOD_YYYYMMDD))" name="OUT_DOB"/>
+    <RulePort dataType="String" order="8" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="CONCAT(VAR_YYMM_YYYYMMDD,VAR_DECODE_DD_YYYYMMDD)" name="VAR_CONCAT_DOD_YYYYMMDD"/>
+    <RulePort dataType="String" order="3" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(IN_DOD,1,INSTR(IN_DOD,'/',1,1)-1)" name="VAR_MM_MMDDYYYY"/>
+    <RulePort dataType="String" order="2" scale="6" precision="6" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(IN_DOD,1,6)" name="VAR_YYMM_YYYYMMDD"/>
+    <RulePort dataType="String" order="7" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(VAR_DD_MMDDYYYY),01,11,02,12,03,13,04,14,05,15,06,16,07,17,08,18,09,19,10,20,11,21,12,22,13,23,14,24,15,25,16,26,17,27,18,28,19,01,20,02,21,03,22,04,23,05,24,06,25,07,26,08,27,09,28,10,29,21,30,22,31,23,00,00))" name="VAR_DECODE_DD_MMDDYYYY"/>
+    <RulePort dataType="String" order="0" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="IN_DOD"/>
+    <RulePort dataType="String" order="4" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(IN_DOD,INSTR(IN_DOD,'/',1,1)+1,INSTR(IN_DOD,'/',1,2)-INSTR(IN_DOD,'/',1,1)+1)" name="VAR_DD_MMDDYYYY"/>
+  </Rule>
+</Metadata>

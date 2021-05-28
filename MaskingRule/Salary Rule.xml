@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Salary Rule" description="Rule to mask Salary" dataType="String" maskingType="KEY">
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="keyStr_srcChars" value="1234567890"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="keyStr_seed" value="1"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="keyStr_resChars" value="1234567890"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+  </Rule>
+</Metadata>

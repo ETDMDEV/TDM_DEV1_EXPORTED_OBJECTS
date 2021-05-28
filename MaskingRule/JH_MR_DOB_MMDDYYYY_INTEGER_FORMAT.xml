@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_DOB" description="JH_Random_Bluring_Masking" dataType="Date" maskingType="RANDOM">
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="randDate_minblur" value="10"/>
+    <RuleParameter name="randDate_range" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="randDate_BlurUnit" value="Day"/>
+    <RuleParameter name="randDate_maxblur" value="10"/>
+    <RuleParameter name="randDate_blurring" value="true"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_DOB_MMDDYYYY_INTEGER_FORMAT" description="Date in MMDDYYYY INT Format">
+    <RulePort dataType="String" order="2" scale="8" precision="8" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(LENGTH(LTRIM(RTRIM(VAR_DOB_CHAR)))=0,'11111111',VAR_DOB_CHAR)" name="VAR1"/>
+    <RulePort dataType="String" order="3" scale="8" precision="8" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(VAR1='00000000','11111111',VAR1)" name="VAR2"/>
+    <RulePort dataType="String" order="6" scale="8" precision="8" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(VAR_DOB_MASK,'MMDDYYYY')" name="VAR3"/>
+    <RulePort dataType="Date" order="4" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_DATE(VAR2,'MMDDYYYY')" name="VAR_DATE"/>
+    <RulePort dataType="Date" inputPortName="VAR_DATE" associatedRuleName="JH_MR_DOB" order="5" scale="8" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="VAR_DOB_MASK"/>
+    <RulePort dataType="String" order="1" scale="8" precision="8" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LPAD(TO_CHAR(IN_DOB),8,'0')" name="VAR_DOB_CHAR"/>
+    <RulePort dataType="Numeric" order="9" scale="8" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(IN_DOB=0,IN_DOB,VAR4)" name="VAR5"/>
+    <RulePort dataType="Numeric" order="10" scale="8" precision="10" length="0" mandatory="true" portType="OUTPUT" expression="VAR5" name="OUT_DOB"/>
+    <RulePort dataType="Numeric" order="0" scale="8" precision="10" length="0" mandatory="true" portType="INPUT" name="IN_DOB"/>
+    <RulePort dataType="Numeric" order="8" scale="8" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(LENGTH(LTRIM(RTRIM(TO_CHAR(IN_DOB))))=0,IN_DOB,VAR_DOB_INT)" name="VAR4"/>
+    <RulePort dataType="Numeric" order="7" scale="8" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_INTEGER(VAR3)" name="VAR_DOB_INT"/>
+  </Rule>
+</Metadata>

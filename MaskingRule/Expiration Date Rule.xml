@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Expiration Date Rule" description="Rule to mask Expiration Date" dataType="Date" maskingType="RANDOM">
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="randDate_maxblur" value="1000"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="randDate_blurring" value="true"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="randDate_BlurUnit" value="Day"/>
+    <RuleParameter name="randDate_range" value="false"/>
+    <RuleParameter name="randDate_minblur" value="100"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+  </Rule>
+</Metadata>

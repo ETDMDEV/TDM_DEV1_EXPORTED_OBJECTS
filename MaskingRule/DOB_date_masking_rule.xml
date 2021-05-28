@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_BIRTH_DD" description="JH_Key_String" dataType="String" maskingType="KEY">
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="keyStr_seed" value="12"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="keyStr_srcChars" value="0123456789"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="keyStr_resChars" value="0123456789"/>
+    <RuleParameter name="postprocess_expression"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="DOB_date_masking_rule">
+    <RulePort dataType="String" order="0" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="IN_DOB"/>
+    <RulePort dataType="String" associatedRuleName="JH_MR_BIRTH_DD" order="3" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="DECODE(V_DOB_Date,'15','98','05','67')" name="MASK_DOB_Date"/>
+    <RulePort dataType="String" order="1" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(IN_DOB,1,8)" name="V_DOB_Year_Month"/>
+    <RulePort dataType="String" order="4" scale="10" precision="10" length="0" mandatory="true" portType="OUTPUT" expression="V_DOB_Year_Month||MASK_DOB_Date" name="OUT_DOB"/>
+    <RulePort dataType="String" order="2" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(IN_DOB,9,2)" name="V_DOB_Date"/>
+  </Rule>
+</Metadata>

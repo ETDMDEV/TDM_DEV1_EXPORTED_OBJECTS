@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_DOB_DD_MMM_YY" description="Example: 11-MAR-44">
+    <RulePort dataType="String" order="4" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="DOB_DD_MASK || DOB_REST" name="DOB_MASK_FINAL"/>
+    <RulePort dataType="Date" order="0" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="DOB"/>
+    <RulePort dataType="String" order="2" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(TO_CHAR(DOB),3,7)" name="DOB_REST"/>
+    <RulePort dataType="Date" order="5" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_DATE(DOB_MASK_FINAL,'DD-MON-YY')" name="DOB_MASK_FINAL2"/>
+    <RulePort dataType="Date" order="6" scale="10" precision="10" length="0" mandatory="true" portType="OUTPUT" expression="DOB_MASK_FINAL2" name="DOB_MASK_FINAL1"/>
+    <RulePort dataType="String" order="3" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LPAD(TO_CHAR(DECODE(TO_INTEGER(DOB_DD),01,11,02,12,03,13,04,14,05,15,06,16,07,17,08,18,09,19,10,20,11,21,12,22,13,23,14,24,15,25,16,26,17,27,18,28,19,01,20,02,21,03,22,04,23,05,24,06,25,07,26,08,27,09,28,10,29,11,30,12,31,13,00,00)),2,'0')" name="DOB_DD_MASK"/>
+    <RulePort dataType="String" order="1" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(TO_CHAR(DOB),1,2)" name="DOB_DD"/>
+  </Rule>
+</Metadata>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_DOB_CHAR_YYYYMMDD_BOB" description="masking of date column having date format as YYYYMMDD used in BOB.">
+    <RulePort dataType="String" order="5" scale="8" precision="8" length="0" mandatory="true" portType="OUTPUT" expression="IIF(LENGTH(LTRIM(RTRIM(IN_DOB)))=0 OR ISNULL(IN_DOB) OR IN_DOB='0' ,IN_DOB,FINAL_DOB)" name="OUT_DOB"/>
+    <RulePort dataType="String" order="3" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(VAR_DD),01,12,02,11,03,10,04,19,05,18,06,17,07,11,08,12,09,13,10,14,11,15,12,16,13,27,14,28,15,20,16,10,17,11,18,12,19,13,20,11,21,15,22,17,23,19,24,10,25,11,26,13,27,14,28,16,29,18,30,11,31,21,00,00))" name="VAR_DD_MASK"/>
+    <RulePort dataType="String" order="2" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression=" SUBSTR(VAR1,7,2)" name="VAR_DD"/>
+    <RulePort dataType="String" order="4" scale="8" precision="8" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(VAR1,1,6)||VAR_DD_MASK" name="FINAL_DOB"/>
+    <RulePort dataType="String" order="0" scale="8" precision="8" length="0" mandatory="true" portType="INPUT" name="IN_DOB"/>
+    <RulePort dataType="String" order="1" scale="8" precision="8" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(LENGTH(LTRIM(RTRIM(IN_DOB)))=0 OR ISNULL(IN_DOB) OR IN_DOB='0','00000000',IN_DOB)" name="VAR1"/>
+  </Rule>
+</Metadata>

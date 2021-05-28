@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_DOB_VARCHAR_YYYY_MM_DD_FORMAT_VALID DATE" description="Masking of dates of STRING Data Type discarding the date of &quot;0000-00-00&quot; format">
+    <RulePort dataType="String" order="1" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(IN_DOB,1,8)" name="VAR_YYYYMM"/>
+    <RulePort dataType="String" order="0" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="IN_DOB"/>
+    <RulePort dataType="String" order="4" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="VAR_YYYYMM||VAR_DD_MASK" name="VAR_CONCAT"/>
+    <RulePort dataType="String" order="5" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(ISNULL(IN_DOB) OR IN_DOB='0000-00-00' OR LENGTH(LTRIM(RTRIM(IN_DOB)))=0,IN_DOB,VAR_CONCAT)" name="VAR_MASK_FINAL"/>
+    <RulePort dataType="String" order="6" scale="10" precision="10" length="0" mandatory="true" portType="OUTPUT" expression="VAR_MASK_FINAL" name="OUT_DOB"/>
+    <RulePort dataType="String" order="2" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(IN_DOB,9,2)" name="VAR_DD"/>
+    <RulePort dataType="String" order="3" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LPAD(TO_CHAR(DECODE(TO_INTEGER(VAR_DD),01,11,02,12,03,13,04,14,05,15,06,16,07,17,08,18,09,19,10,20,11,21,12,22,13,23,14,24,15,25,16,26,17,27,18,28,19,11,20,12,21,13,22,14,23,15,24,16,25,17,26,18,27,19,28,20,29,21,30,22,31,23,00,00)),2,'0')" name="VAR_DD_MASK"/>
+  </Rule>
+</Metadata>

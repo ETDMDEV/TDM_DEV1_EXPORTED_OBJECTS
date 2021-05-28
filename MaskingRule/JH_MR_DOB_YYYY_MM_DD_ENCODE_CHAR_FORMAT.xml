@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_DOB_YYYY_MM_DD_ENCODE_CHAR_FORMAT" description="YYYY-MM-DD">
+    <RulePort dataType="String" order="1" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="iif(ISNULL(IN_DOB),'1111-11-11',IIF(length(LTRIM(RTRIM(IN_DOB)))=0,'1111-11-11',IN_DOB))" name="VAR1"/>
+    <RulePort dataType="String" order="6" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LPAD(VAR_DD_DECODE,2,'0')" name="VAR_DD_LPAD"/>
+    <RulePort dataType="String" order="7" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="VAR_YY||VAR_MM||VAR_DD_LPAD" name="VAR_CONCAT"/>
+    <RulePort dataType="String" order="0" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="IN_DOB"/>
+    <RulePort dataType="String" order="3" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(VAR1,6,7)" name="VAR_MM"/>
+    <RulePort dataType="String" order="2" scale="5" precision="5" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(VAR1,1,4)" name="VAR_YY"/>
+    <RulePort dataType="String" order="5" scale="3" precision="3" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(VAR_DD),11,01,12,02,13,03,14,04,15,05,16,06,17,07,18,08,19,09,20,10,21,11,22,12,23,13,24,14,25,15,26,16,27,17,28,18,01,19,02,20,03,21,04,22,05,23,06,24,07,25,08,26,09,27,10,28,21,29,22,30,23,31,00,00))" name="VAR_DD_DECODE"/>
+    <RulePort dataType="String" order="4" scale="3" precision="3" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(VAR1,9,10)" name="VAR_DD"/>
+    <RulePort dataType="String" order="9" scale="10" precision="10" length="0" mandatory="true" portType="OUTPUT" expression="VAR_FINAL" name="OUT_DOB"/>
+    <RulePort dataType="String" order="8" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(ISNULL(IN_DOB),IN_DOB,IIF(length(LTRIM(RTRIM(IN_DOB)))=0,IN_DOB,VAR_CONCAT))" name="VAR_FINAL"/>
+  </Rule>
+</Metadata>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="Passport Rule" description="Rule to mask Passport" dataType="String" maskingType="ENCRYPTION">
+    <RuleParameter name="encryption_technique" value="AES"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="true"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="encryption_key" value="1000"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+  </Rule>
+</Metadata>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_VPAS_NULL_Quote" dataType="String" maskingType="EXPRESSION">
+    <RuleParameter name="expr_expression" value="Input_Column"/>
+    <RuleParameter name="excp_nullspaceconst" value="true"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="expr_repeatable" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspaceconstval" value="&quot;&quot;"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+  </Rule>
+</Metadata>

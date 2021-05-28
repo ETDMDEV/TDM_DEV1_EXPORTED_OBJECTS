@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="Email_Masking_FirstName_LastName_Rule" description="Email should be masked as &lt;FirstName>.&lt;LastName>@abc.com">
+    <RulePort dataType="String" order="3" scale="10" precision="100" length="0" mandatory="true" portType="OUTPUT" expression="V_EmailMask" name="o_EmailMask"/>
+    <RulePort dataType="String" order="0" scale="10" precision="100" length="0" mandatory="true" portType="INPUT" name="FirstName"/>
+    <RulePort dataType="String" order="2" scale="10" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="FirstName||'.'||LastName||'@abc.com'" name="V_EmailMask"/>
+    <RulePort dataType="String" order="1" scale="10" precision="100" length="0" mandatory="true" portType="INPUT" name="LastName"/>
+  </Rule>
+</Metadata>

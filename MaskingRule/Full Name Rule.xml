@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="Full Name Rule" description="Rule to mask Full Name" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="subst_dict" value="fullnames.dic"/>
+    <RuleParameter name="subst_outcol" value="FULL NAME"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="subst_repeatable" value="false"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="subst_uniquesubstdata" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="subst_dict_id" value="22"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <DictionarySource fileEncoding="7-bit ASCII" tableName="fullnames.dic" dictionaryType="Flat_File" filePath="D:\Informatica\Informatica9.5.1\server\infa_shared\LkpFiles\fullnames.dic" name="fullnames.dic">
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="FULL NAME"/>
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="GENDER"/>
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="SNO"/>
+    </DictionarySource>
+  </Rule>
+</Metadata>

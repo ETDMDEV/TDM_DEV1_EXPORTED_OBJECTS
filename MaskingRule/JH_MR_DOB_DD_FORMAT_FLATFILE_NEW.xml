@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_DOB_DD_FORMAT_FLATFILE_NEW" description="Date in DD format">
+    <RulePort dataType="String" order="3" scale="2" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(LENGTH(LTRIM(RTRIM(IN_DD)))=0,IN_DD,TO_CHAR(Var1))" name="Var2"/>
+    <RulePort dataType="Numeric" order="2" scale="2" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="DECODE(VAR_DD_INT,01,11,02,12,03,13,04,14,05,15,06,16,07,17,08,18,09,19,10,20,11,21,12,22,13,23,14,24,15,25,16,26,17,27,18,28,19,11,20,12,21,13,22,14,23,15,24,16,25,17,26,18,27,19,28,20,29,21,30,22,31,23,00,00)" name="Var1"/>
+    <RulePort dataType="String" order="0" scale="2" precision="2" length="0" mandatory="true" portType="INPUT" name="IN_DD"/>
+    <RulePort dataType="Numeric" order="1" scale="2" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(LENGTH(LTRIM(RTRIM(IN_DD)))=0,00,TO_INTEGER(IN_DD))" name="VAR_DD_INT"/>
+    <RulePort dataType="String" order="4" scale="2" precision="2" length="0" mandatory="true" portType="OUTPUT" expression="IIF(IN_DD='00',IN_DD,Var2)" name="OUT_MASK_DD"/>
+  </Rule>
+</Metadata>

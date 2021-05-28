@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_SSN_CDL_FIX" description="using decode logic to mask the SSN">
+    <RulePort dataType="String" order="12" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(length(Input_SSN)=4,Concat4,Concatinate)" name="Matching"/>
+    <RulePort dataType="String" order="6" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(substr(Input_SSN,6,1)),1,9,2,8,3,7,4,6,5,1,6,2,7,0,8,4,9,5,0,3))" name="Digit6th"/>
+    <RulePort dataType="String" order="13" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(length(RTRIM(LTRIM(Input_SSN)))=0 or Input_SSN = '0',Input_SSN,Matching)" name="FinalMatch"/>
+    <RulePort dataType="String" order="14" scale="10" precision="10" length="0" mandatory="true" portType="OUTPUT" expression="FinalMatch" name="Outputport"/>
+    <RulePort dataType="String" order="5" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(substr(Input_SSN,5,1)),1,9,2,8,3,7,4,6,5,1,6,2,7,0,8,4,9,5,0,3))" name="Digit5th"/>
+    <RulePort dataType="String" order="2" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(substr(Input_SSN,2,1)),1,9,2,8,3,7,4,6,5,1,6,2,7,0,8,4,9,5,0,3))" name="Digit2nd"/>
+    <RulePort dataType="String" order="9" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(substr(Input_SSN,9,1)),1,9,2,8,3,7,4,6,5,1,6,2,7,0,8,4,9,5,0,3))" name="Digit9th"/>
+    <RulePort dataType="String" order="1" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(substr(Input_SSN,1,1)),1,9,2,8,3,7,4,6,5,1,6,2,7,0,8,4,9,5,0,3))" name="Digit1st"/>
+    <RulePort dataType="String" order="11" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="Digit1st||Digit2nd||Digit3rd||Digit4th" name="Concat4"/>
+    <RulePort dataType="String" order="7" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(substr(Input_SSN,7,1)),1,9,2,8,3,7,4,6,5,1,6,2,7,0,8,4,9,5,0,3))" name="Digit7th"/>
+    <RulePort dataType="String" order="3" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(substr(Input_SSN,3,1)),1,9,2,8,3,7,4,6,5,1,6,2,7,0,8,4,9,5,0,3))" name="Digit3rd"/>
+    <RulePort dataType="String" order="4" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(substr(Input_SSN,4,1)),1,9,2,8,3,7,4,6,5,1,6,2,7,0,8,4,9,5,0,3))" name="Digit4th"/>
+    <RulePort dataType="String" order="8" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(substr(Input_SSN,8,1)),1,9,2,8,3,7,4,6,5,1,6,2,7,0,8,4,9,5,0,3))" name="Digit8th"/>
+    <RulePort dataType="String" order="10" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="Digit1st||Digit2nd||Digit3rd||Digit4th||Digit5th||Digit6th||Digit7th||Digit8th||Digit9th" name="Concatinate"/>
+    <RulePort dataType="String" order="0" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="Input_SSN"/>
+  </Rule>
+</Metadata>

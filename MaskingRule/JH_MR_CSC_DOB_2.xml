@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_CSC_DOB_2" description="FORMATS: January 4,1968 &#xa;&amp;&#xa;1945-02-09">
+    <RulePort dataType="String" order="3" scale="255" precision="255" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LTRIM(RTRIM(SUBSTR(trimm,INSTR(trimm,',',1,1)+1,LENGTH(trimm))))" name="Year1"/>
+    <RulePort dataType="String" order="1" scale="255" precision="255" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LTRIM(RTRIM(InDOB))" name="trimm"/>
+    <RulePort dataType="String" order="9" scale="255" precision="255" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(date2),01,11,02,12,03,13,04,14,05,15,06,16,07,17,08,18,09,19,10,20,11,21,12,22,13,23,14,24,15,25,16,26,17,27,18,28,19,01,20,02,21,03,22,04,23,05,24,06,25,07,26,08,27,09,28,10,29,21,30,22,31,23,00,00))" name="Maskdecode2"/>
+    <RulePort dataType="String" order="8" scale="255" precision="255" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LTRIM(RTRIM(SUBSTR(trimm,9,2)))" name="date2"/>
+    <RulePort dataType="String" order="5" scale="255" precision="255" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(Date1),1,11,2,12,3,13,4,14,5,15,6,16,7,17,8,18,9,19,10,20,11,21,12,22,13,23,14,24,15,25,16,26,17,27,18,28,19,1,20,2,21,3,22,4,23,5,24,6,25,7,26,8,27,9,28,10,29,21,30,22,31,23,00,00))" name="Maskdecode1"/>
+    <RulePort dataType="String" order="10" scale="255" precision="255" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="CONCAT(Restdate2,Maskdecode2)" name="Concat2"/>
+    <RulePort dataType="String" order="4" scale="255" precision="255" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LTRIM(RTRIM(SUBSTR(trimm,INSTR(trimm,' ',1,1)+1,INSTR(trimm,',',1,1)-INSTR(trimm,' ',1,1)+1)))" name="Date1"/>
+    <RulePort dataType="String" order="12" scale="255" precision="255" length="0" mandatory="true" portType="OUTPUT" expression="IIF(LENGTH(LTRIM(RTRIM(InDOB)))=0 OR ISNULL(InDOB),InDOB,Match)" name="OutDOB"/>
+    <RulePort dataType="String" order="0" scale="255" precision="255" length="0" mandatory="true" portType="INPUT" name="InDOB"/>
+    <RulePort dataType="String" order="6" scale="255" precision="255" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="CONCAT(CONCAT(CONCAT(CONCAT(Month1,' '),Maskdecode1),', '),Year1)" name="Concat1"/>
+    <RulePort dataType="String" order="11" scale="255" precision="255" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(trimm,'-',1)>0,Concat2,Concat1)" name="Match"/>
+    <RulePort dataType="String" order="7" scale="255" precision="255" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LTRIM(RTRIM(SUBSTR(trimm,1,8)))" name="Restdate2"/>
+    <RulePort dataType="String" order="2" scale="255" precision="255" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LTRIM(RTRIM(SUBSTR(trimm,1,INSTR(trimm,' ',1,1)-1)))" name="Month1"/>
+  </Rule>
+</Metadata>

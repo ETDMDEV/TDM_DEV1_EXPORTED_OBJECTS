@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_DOB_DD_ONLY_NUMERIC" description="only DD field in numeric">
+    <RulePort dataType="Numeric" order="0" scale="2" precision="2" length="0" mandatory="true" portType="INPUT" name="In_DD"/>
+    <RulePort dataType="Numeric" order="2" scale="2" precision="2" length="0" mandatory="true" portType="OUTPUT" expression="decode_var" name="Out_DD"/>
+    <RulePort dataType="Numeric" order="1" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="DECODE(TO_INTEGER(In_DD),01,11,02,12,03,13,04,14,05,15,06,16,07,17,08,18,09,19,10,20,11,21,12,22,13,23,14,24,15,25,16,26,17,27,18,28,19,11,20,12,21,13,22,14,23,15,24,16,25,17,26,18,27,19,28,20,29,21,30,22,31,23,00,00)" name="decode_var"/>
+  </Rule>
+</Metadata>

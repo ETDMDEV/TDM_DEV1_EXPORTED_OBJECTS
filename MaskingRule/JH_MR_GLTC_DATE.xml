@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_GLTC_DATE">
+    <RulePort dataType="Date" order="7" scale="29" precision="29" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_DATE(V_DATE)" name="M_DATE"/>
+    <RulePort dataType="String" order="1" scale="29" precision="29" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="iif(LENGTH(LTRIM(RTRIM(TO_CHAR(I_DOB))))=0,'11/11/1111',TO_CHAR(I_DOB,'MM/DD/YYYY'))" name="VAR1"/>
+    <RulePort dataType="String" order="6" scale="29" precision="29" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="L_DT||V_YY||V_Right" name="V_DATE"/>
+    <RulePort dataType="Date" order="8" scale="29" precision="29" length="0" mandatory="true" portType="OUTPUT" expression="M_DATE" name="O_DOB"/>
+    <RulePort dataType="Date" order="0" scale="29" precision="29" length="0" mandatory="true" portType="INPUT" name="I_DOB"/>
+    <RulePort dataType="String" order="5" scale="29" precision="29" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(TO_INTEGER(V_year)+1900)" name="V_YY"/>
+    <RulePort dataType="String" order="2" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LTRIM(RTRIM(SUBSTR(VAR1,7,4)))" name="V_year"/>
+    <RulePort dataType="String" order="4" scale="29" precision="29" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(VAR1,11,(LENGTH(VAR1)-11))" name="V_Right"/>
+    <RulePort dataType="String" order="3" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(VAR1,1,6)" name="L_DT"/>
+  </Rule>
+</Metadata>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="bassaik">
+    <RulePort dataType="String" order="4" scale="10" precision="20" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(in_dob,1,2)" name="decode_1"/>
+    <RulePort dataType="String" order="6" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(in_dob,3)" name="decode_3"/>
+    <RulePort dataType="String" order="0" scale="10" precision="20" length="0" mandatory="true" portType="INPUT" name="in_dob"/>
+    <RulePort dataType="String" order="3" scale="10" precision="20" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(change_day,'DD-MON-YYYY')" name="format_dob"/>
+    <RulePort dataType="String" order="7" scale="10" precision="20" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="decode2||decode_3" name="decode_4"/>
+    <RulePort dataType="Date" order="1" scale="10" precision="20" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_DATE(in_dob,'DD-MON-YYYY')" name="to_date_var"/>
+    <RulePort dataType="String" order="5" scale="10" precision="20" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(decode_1),01,11,02,12,03,13,04,14,05,15,06,16,07,17,08,18,09,19,10,20,11,21,12,22,13,23,14,24,15,25,16,26,17,27,18,28,19,01,20,02,21,03,22,04,23,05,24,06,25,07,26,08,27,09,28,10,29,21,30,22,31,23,00,00)) " name="decode2"/>
+    <RulePort dataType="String" order="8" scale="10" precision="20" length="0" mandatory="true" portType="OUTPUT" expression="decode_4" name="dob_out"/>
+    <RulePort dataType="Date" order="2" scale="10" precision="20" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="ADD_TO_DATE(to_date_var,'DD',-5)" name="change_day"/>
+  </Rule>
+</Metadata>

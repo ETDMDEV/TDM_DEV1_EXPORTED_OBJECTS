@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_Addr_Line2" description="JH_Substitution_Masking" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="subst_uniquesubstdata" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="subst_outcol" value="ADDRESSLINE2"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="subst_dict" value="JH_DIC_Address"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="subst_dict_id" value="202"/>
+    <RuleParameter name="subst_seedval" value="12"/>
+    <DictionarySource fileEncoding="7-bit ASCII" description="JH_Address_Dictionary" tableName="JH_DIC_Address.dic" dictionaryType="Flat_File" filePath="/opt/informatica/pc961/server/infa_shared/LkpFiles" name="JH_DIC_Address">
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE1"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE2"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE3"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="SNO"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_Email_Address" description="JH_Email_Masking" dataType="String" maskingType="EMAIL">
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="email_seedVal" value="12"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="email_repeatable" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="email_stdmaskingType" value="true"/>
+    <RuleParameter name="email_advmaskingType" value="false"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_Phone_Number" description="JH_Key_Masking" dataType="String" maskingType="KEY">
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="keyStr_srcChars" value="0123456789"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="keyStr_seed" value="12"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="keyStr_resChars" value="0123456789"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_Addr_Line3" description="JH_Substitution_Masking" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="subst_outcol" value="ADDRESSLINE3"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="subst_seedval" value="12"/>
+    <RuleParameter name="subst_dict" value="JH_DIC_Address"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="subst_dict_id" value="202"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="subst_uniquesubstdata" value="false"/>
+    <DictionarySource fileEncoding="7-bit ASCII" description="JH_Address_Dictionary" tableName="JH_DIC_Address.dic" dictionaryType="Flat_File" filePath="/opt/informatica/pc961/server/infa_shared/LkpFiles" name="JH_DIC_Address">
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE1"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE2"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE3"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="SNO"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_Fax_Number" description="JH_Key_Masking" dataType="String" maskingType="KEY">
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="keyStr_srcChars" value="0123456789"/>
+    <RuleParameter name="keyStr_resChars" value="0123456789"/>
+    <RuleParameter name="keyStr_seed" value="12"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_Addr_Line1" description="JH_Substitution_Masking" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="subst_outcol" value="ADDRESSLINE1"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="subst_dict" value="JH_DIC_Address"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="subst_dict_id" value="202"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="subst_uniquesubstdata" value="false"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="subst_seedval" value="12"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <DictionarySource fileEncoding="7-bit ASCII" description="JH_Address_Dictionary" tableName="JH_DIC_Address.dic" dictionaryType="Flat_File" filePath="/opt/informatica/pc961/server/infa_shared/LkpFiles" name="JH_DIC_Address">
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE1"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE2"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE3"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="SNO"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_First_Name" description="JH_Substitution_Masking" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="subst_dict" value="JH_DIC_Firstname"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="preprocess_expression" value="UPPER(Input_Column)"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="subst_dict_id" value="205"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="subst_outcol" value="FIRSTNAME"/>
+    <RuleParameter name="subst_uniquesubstdata" value="false"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="subst_seedval" value="1"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <DictionarySource fileEncoding="7-bit ASCII" description="JH_FirstName_Dictionary" tableName="JH_DIC_FirstName.dic" dictionaryType="Flat_File" filePath="/opt/informatica/pc961/server/infa_shared/LkpFiles" name="JH_DIC_Firstname">
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="FIRSTNAME"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="SNO"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_SSN" description="JH_Key_Masking" dataType="String" maskingType="KEY">
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="keyStr_srcChars" value="0123456789"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="keyStr_resChars" value="0123456789"/>
+    <RuleParameter name="keyStr_seed" value="12"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_AGENCY_TAYAUDIT">
+    <RulePort dataType="String" order="47" scale="40" precision="40" length="0" mandatory="true" portType="OUTPUT" expression="HOMEST3_MATCH" name="HOMEST3_OUTPUT"/>
+    <RulePort dataType="String" order="44" scale="15" precision="15" length="0" mandatory="true" portType="OUTPUT" expression="GIVENNM_MATCH" name="GIVENNAME_OUTPUT"/>
+    <RulePort dataType="String" order="34" scale="12" precision="12" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,CELLPHONE_RULE,CELLPHONE)" name="CELLPHONE_MATCH"/>
+    <RulePort dataType="String" order="45" scale="40" precision="40" length="0" mandatory="true" portType="OUTPUT" expression="HOMEST1_MATCH" name="HOMEST1_OUTPUT"/>
+    <RulePort dataType="String" order="11" scale="12" precision="12" length="0" mandatory="true" portType="INPUT" name="FAXNUM"/>
+    <RulePort dataType="String" inputPortName="HOMEST2" associatedRuleName="JH_MR_Addr_Line2" order="21" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="HOMEST2_RULE"/>
+    <RulePort dataType="String" order="0" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="AUTABLENAME"/>
+    <RulePort dataType="String" inputPortName="INTERNET1" associatedRuleName="JH_MR_Email_Address" order="39" scale="47" precision="47" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="INTERNET1_RULE"/>
+    <RulePort dataType="String" order="56" scale="47" precision="47" length="0" mandatory="true" portType="OUTPUT" expression="INTERNET2_MATCH" name="INTERNET2_OUTPUT"/>
+    <RulePort dataType="String" inputPortName="CELLPHONE" associatedRuleName="JH_MR_Phone_Number" order="33" scale="12" precision="12" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="CELLPHONE_RULE"/>
+    <RulePort dataType="String" order="16" scale="11" precision="11" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,SSN_RULE,SSN)" name="SSN_MATCH"/>
+    <RulePort dataType="String" order="26" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,UPPER(MAILST1_RULE),MAILST1)" name="MAILST1_MATCH"/>
+    <RulePort dataType="String" order="7" scale="40" precision="40" length="0" mandatory="true" portType="INPUT" name="MAILST2"/>
+    <RulePort dataType="String" order="32" scale="12" precision="12" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,PHONENUM_RULE,PHONENUM)" name="PHONENUM_MATCH"/>
+    <RulePort dataType="String" order="1" scale="11" precision="11" length="0" mandatory="true" portType="INPUT" name="SSN"/>
+    <RulePort dataType="String" inputPortName="INTERNET2" associatedRuleName="JH_MR_Email_Address" order="41" scale="47" precision="47" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="INTERNET2_RULE"/>
+    <RulePort dataType="String" order="20" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,UPPER(HOMEST1_RULE),HOMEST1)" name="HOMEST1_MATCH"/>
+    <RulePort dataType="String" order="50" scale="40" precision="40" length="0" mandatory="true" portType="OUTPUT" expression="MAILST3_MATCH" name="MAILST3_OUTPUT"/>
+    <RulePort dataType="String" inputPortName="PHONENUM" associatedRuleName="JH_MR_Phone_Number" order="31" scale="12" precision="12" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="PHONENUM_RULE"/>
+    <RulePort dataType="String" order="42" scale="47" precision="47" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,UPPER(INTERNET2_RULE),INTERNET2)" name="INTERNET2_MATCH"/>
+    <RulePort dataType="String" order="51" scale="12" precision="12" length="0" mandatory="true" portType="OUTPUT" expression="PHONENUM_MATCH" name="PHONENUM_OUTPUT"/>
+    <RulePort dataType="String" order="24" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,UPPER(HOMEST3_RULE),HOMEST3)" name="HOMEST3_MATCH"/>
+    <RulePort dataType="String" order="6" scale="40" precision="40" length="0" mandatory="true" portType="INPUT" name="MAILST1"/>
+    <RulePort dataType="String" inputPortName="MAILST3" associatedRuleName="JH_MR_Addr_Line3" order="29" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="MAILST3_RULE"/>
+    <RulePort dataType="String" order="40" scale="47" precision="47" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,UPPER(INTERNET1_RULE),INTERNET1)" name="INTERNET1_MATCH"/>
+    <RulePort dataType="String" order="12" scale="12" precision="12" length="0" mandatory="true" portType="INPUT" name="PAGERNUM"/>
+    <RulePort dataType="String" order="3" scale="40" precision="40" length="0" mandatory="true" portType="INPUT" name="HOMEST1"/>
+    <RulePort dataType="String" inputPortName="FAXNUM" associatedRuleName="JH_MR_Fax_Number" order="35" scale="12" precision="12" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="FAXNUM_RULE"/>
+    <RulePort dataType="String" order="54" scale="12" precision="12" length="0" mandatory="true" portType="OUTPUT" expression="PAGERNUM_MATCH" name="PAGERNUM_OUTPUT"/>
+    <RulePort dataType="String" order="18" scale="15" precision="15" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,UPPER(GIVENNM_RULE),GIVENNAME)" name="GIVENNM_MATCH"/>
+    <RulePort dataType="String" order="13" scale="47" precision="47" length="0" mandatory="true" portType="INPUT" name="INTERNET1"/>
+    <RulePort dataType="String" inputPortName="HOMEST3" associatedRuleName="JH_MR_Addr_Line3" order="23" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="HOMEST3_RULE"/>
+    <RulePort dataType="String" order="38" scale="12" precision="12" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,PAGERNUM_RULE,PAGERNUM)" name="PAGERNUM_MATCH"/>
+    <RulePort dataType="String" order="48" scale="40" precision="40" length="0" mandatory="true" portType="OUTPUT" expression="MAILST1_MATCH" name="MAILST1_OUTPUT"/>
+    <RulePort dataType="String" inputPortName="HOMEST1" associatedRuleName="JH_MR_Addr_Line1" order="19" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="HOMEST1_RULE"/>
+    <RulePort dataType="String" order="55" scale="47" precision="47" length="0" mandatory="true" portType="OUTPUT" expression="INTERNET1_MATCH" name="INTERNET1_OUTPUT"/>
+    <RulePort dataType="String" order="53" scale="12" precision="12" length="0" mandatory="true" portType="OUTPUT" expression="FAXNUM_MATCH" name="FAXNUM_OUTPUT"/>
+    <RulePort dataType="String" inputPortName="MAILST1" associatedRuleName="JH_MR_Addr_Line1" order="25" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="MAILST1_RULE"/>
+    <RulePort dataType="String" inputPortName="MAILST2" associatedRuleName="JH_MR_Addr_Line2" order="27" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="MAILST2_RULE"/>
+    <RulePort dataType="String" order="49" scale="40" precision="40" length="0" mandatory="true" portType="OUTPUT" expression="MAILST2_MATCH" name="MAILST2_OUTPUT"/>
+    <RulePort dataType="String" inputPortName="GIVENNAME" associatedRuleName="JH_MR_First_Name" order="17" scale="15" precision="15" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="GIVENNM_RULE"/>
+    <RulePort dataType="String" order="22" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,UPPER(HOMEST2_RULE),HOMEST2)" name="HOMEST2_MATCH"/>
+    <RulePort dataType="String" order="10" scale="12" precision="12" length="0" mandatory="true" portType="INPUT" name="CELLPHONE"/>
+    <RulePort dataType="String" inputPortName="SSN" associatedRuleName="JH_MR_SSN" order="15" scale="11" precision="11" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="SSN_RULE"/>
+    <RulePort dataType="String" order="28" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,UPPER(MAILST2_RULE),MAILST2)" name="MAILST2_MATCH"/>
+    <RulePort dataType="String" order="4" scale="40" precision="40" length="0" mandatory="true" portType="INPUT" name="HOMEST2"/>
+    <RulePort dataType="String" order="43" scale="11" precision="11" length="0" mandatory="true" portType="OUTPUT" expression="SSN_MATCH" name="SSN_OUTPUT"/>
+    <RulePort dataType="String" order="52" scale="12" precision="12" length="0" mandatory="true" portType="OUTPUT" expression="CELLPHONE_MATCH" name="CELLPHONE_OUTPUT"/>
+    <RulePort dataType="String" order="9" scale="12" precision="12" length="0" mandatory="true" portType="INPUT" name="PHONENUM"/>
+    <RulePort dataType="String" inputPortName="PAGERNUM" associatedRuleName="JH_MR_Phone_Number" order="37" scale="12" precision="12" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="PAGERNUM_RULE"/>
+    <RulePort dataType="String" order="2" scale="15" precision="15" length="0" mandatory="true" portType="INPUT" name="GIVENNAME"/>
+    <RulePort dataType="String" order="14" scale="47" precision="47" length="0" mandatory="true" portType="INPUT" name="INTERNET2"/>
+    <RulePort dataType="String" order="5" scale="40" precision="40" length="0" mandatory="true" portType="INPUT" name="HOMEST3"/>
+    <RulePort dataType="String" order="36" scale="12" precision="12" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,FAXNUM_RULE,FAXNUM)" name="FAXNUM_MATCH"/>
+    <RulePort dataType="String" order="8" scale="40" precision="40" length="0" mandatory="true" portType="INPUT" name="MAILST3"/>
+    <RulePort dataType="String" order="46" scale="40" precision="40" length="0" mandatory="true" portType="OUTPUT" expression="HOMEST2_MATCH" name="HOMEST2_OUTPUT"/>
+    <RulePort dataType="String" order="30" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(INSTR(AUTABLENAME,'VAYSELLER',1,1)>0,UPPER(MAILST3_RULE),MAILST3)" name="MAILST3_MATCH"/>
+  </Rule>
+</Metadata>

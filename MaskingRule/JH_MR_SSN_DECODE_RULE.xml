@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_SSN_DECODE_RULE">
+    <RulePort dataType="String" order="0" scale="11" precision="11" length="0" mandatory="true" portType="INPUT" name="IN_SSN"/>
+    <RulePort dataType="String" order="6" scale="1" precision="1" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(V_SSN,5,1)" name="V_SSN_DIG5"/>
+    <RulePort dataType="String" order="13" scale="11" precision="11" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(IS_NUMBER(V_SSN_DIG1),TO_CHAR(DECODE(TO_INTEGER(V_SSN_DIG1),0,0,1,6,2,7,3,8,4,9,5,1,6,2,7,3,8,4,9,5)),V_SSN_DIG1)||IIF(IS_NUMBER(V_SSN_DIG2),TO_CHAR(DECODE(TO_INTEGER(V_SSN_DIG2),0,0,1,6,2,7,3,8,4,9,5,1,6,2,7,3,8,4,9,5)),V_SSN_DIG2)||IIF(IS_NUMBER(V_SSN_DIG3),TO_CHAR(DECODE(TO_INTEGER(V_SSN_DIG3),0,0,1,6,2,7,3,8,4,9,5,1,6,2,7,3,8,4,9,5)),V_SSN_DIG3)||IIF(IS_NUMBER(V_SSN_DIG4),TO_CHAR(DECODE(TO_INTEGER(V_SSN_DIG4),0,0,1,6,2,7,3,8,4,9,5,1,6,2,7,3,8,4,9,5)),V_SSN_DIG4)||IIF(IS_NUMBER(V_SSN_DIG5),TO_CHAR(DECODE(TO_INTEGER(V_SSN_DIG5),0,0,1,6,2,7,3,8,4,9,5,1,6,2,7,3,8,4,9,5)),V_SSN_DIG5)||IIF(IS_NUMBER(V_SSN_DIG6),TO_CHAR(DECODE(TO_INTEGER(V_SSN_DIG6),0,0,1,6,2,7,3,8,4,9,5,1,6,2,7,3,8,4,9,5)),V_SSN_DIG6)||IIF(IS_NUMBER(V_SSN_DIG7),TO_CHAR(DECODE(TO_INTEGER(V_SSN_DIG7),0,0,1,6,2,7,3,8,4,9,5,1,6,2,7,3,8,4,9,5)),V_SSN_DIG7)||IIF(IS_NUMBER(V_SSN_DIG8),TO_CHAR(DECODE(TO_INTEGER(V_SSN_DIG8),0,0,1,6,2,7,3,8,4,9,5,1,6,2,7,3,8,4,9,5)),V_SSN_DIG8)||IIF(IS_NUMBER(V_SSN_DIG9),TO_CHAR(DECODE(TO_INTEGER(V_SSN_DIG9),0,0,1,6,2,7,3,8,4,9,5,1,6,2,7,3,8,4,9,5)),V_SSN_DIG9)||IIF(IS_NUMBER(V_SSN_DIG10),TO_CHAR(DECODE(TO_INTEGER(V_SSN_DIG10),0,0,1,6,2,7,3,8,4,9,5,1,6,2,7,3,8,4,9,5)),V_SSN_DIG10)||IIF(IS_NUMBER(V_SSN_DIG11),TO_CHAR(DECODE(TO_INTEGER(V_SSN_DIG11),0,0,1,6,2,7,3,8,4,9,5,1,6,2,7,3,8,4,9,5)),V_SSN_DIG11)" name="V_SSN_DECODE"/>
+    <RulePort dataType="String" order="1" scale="11" precision="11" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IN_SSN" name="V_SSN"/>
+    <RulePort dataType="String" order="5" scale="1" precision="1" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(V_SSN,4,1)" name="V_SSN_DIG4"/>
+    <RulePort dataType="String" order="9" scale="1" precision="1" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(V_SSN,8,1)" name="V_SSN_DIG8"/>
+    <RulePort dataType="String" order="7" scale="1" precision="1" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(V_SSN,6,1)" name="V_SSN_DIG6"/>
+    <RulePort dataType="String" order="12" scale="1" precision="1" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(V_SSN,11,1)" name="V_SSN_DIG11"/>
+    <RulePort dataType="String" order="14" scale="11" precision="11" length="0" mandatory="true" portType="OUTPUT" expression="V_SSN_DECODE" name="OUT_SSN"/>
+    <RulePort dataType="String" order="8" scale="1" precision="1" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(V_SSN,7,1)" name="V_SSN_DIG7"/>
+    <RulePort dataType="String" order="4" scale="1" precision="1" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(V_SSN,3,1)" name="V_SSN_DIG3"/>
+    <RulePort dataType="String" order="3" scale="1" precision="1" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(V_SSN,2,1)" name="V_SSN_DIG2"/>
+    <RulePort dataType="String" order="11" scale="1" precision="1" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(V_SSN,9,1)" name="V_SSN_DIG9"/>
+    <RulePort dataType="String" order="10" scale="1" precision="1" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(V_SSN,10,1)" name="V_SSN_DIG10"/>
+    <RulePort dataType="String" order="2" scale="1" precision="1" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(V_SSN,1,1)" name="V_SSN_DIG1"/>
+  </Rule>
+</Metadata>

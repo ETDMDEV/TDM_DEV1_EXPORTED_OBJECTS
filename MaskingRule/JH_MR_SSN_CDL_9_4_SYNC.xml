@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_SSN" description="JH_Key_Masking" dataType="String" maskingType="KEY">
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="keyStr_srcChars" value="0123456789"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="keyStr_resChars" value="0123456789"/>
+    <RuleParameter name="keyStr_seed" value="12"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_SSN_CDL_9_4_SYNC" description="To sync 9 digit &amp; 4 digit SSN">
+    <RulePort dataType="String" order="0" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="SSN_9_DIGIT"/>
+    <RulePort dataType="String" order="6" scale="10" precision="10" length="0" mandatory="true" portType="OUTPUT" expression="MASKED_9" name="O_SSN_9"/>
+    <RulePort dataType="String" order="5" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(LENGTH(LTRIM(RTRIM(SSN_4_DIGIT)))=0 OR TO_INTEGER(LTRIM(RTRIM(SSN_4_DIGIT)))=0,SSN_4_DIGIT,M_SSN_4)" name="MASKED_4"/>
+    <RulePort dataType="String" order="4" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(LENGTH(LTRIM(RTRIM(SSN_9_DIGIT)))=0 OR TO_INTEGER(LTRIM(RTRIM(SSN_9_DIGIT)))=0,SSN_9_DIGIT,M_SSN_9)" name="MASKED_9"/>
+    <RulePort dataType="String" order="7" scale="10" precision="10" length="0" mandatory="true" portType="OUTPUT" expression="MASKED_4" name="O_SSN_4"/>
+    <RulePort dataType="String" inputPortName="SSN_9_DIGIT" associatedRuleName="JH_MR_SSN" order="2" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="M_SSN_9"/>
+    <RulePort dataType="String" order="1" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="SSN_4_DIGIT"/>
+    <RulePort dataType="String" order="3" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(M_SSN_9,6,4)" name="M_SSN_4"/>
+  </Rule>
+</Metadata>

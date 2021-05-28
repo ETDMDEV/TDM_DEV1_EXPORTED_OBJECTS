@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_DOB_YYYY_MM_DD_TIMESTAMP_ONLY_DATE" description="Masking of date of 1981-10-28 00:00:00.000 format for ONLY DATE">
+    <RulePort dataType="String" order="5" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_CHAR(DECODE(TO_INTEGER(Day),01,11,02,12,03,13,04,14,05,15,06,16,07,17,08,18,09,19,10,20,11,21,12,22,13,23,14,24,15,25,16,26,17,27,18,28,19,12,20,13,21,14,22,15,23,16,24,17,25,18,26,19,27,20,28,21,29,22,30,23,31,24,00,00))" name="decode_day"/>
+    <RulePort dataType="String" order="9" scale="15" precision="15" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(Var2,11)" name="rest_hr_min_sec"/>
+    <RulePort dataType="String" order="2" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(Var2,9,10)" name="Day"/>
+    <RulePort dataType="Date" order="7" scale="20" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_DATE(date_concat,'YYYY-MM-DD')" name="convert_dt"/>
+    <RulePort dataType="Date" order="8" scale="20" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="iif(ISNULL(IN_DOB),IN_DOB,IIF(length(LTRIM(RTRIM(TO_CHAR(IN_DOB))))=0,IN_DOB,convert_dt))" name="date_final"/>
+    <RulePort dataType="String" order="4" scale="2" precision="2" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(Var2,6,7)" name="Mm"/>
+    <RulePort dataType="Date" order="0" scale="23" precision="10" length="0" mandatory="true" portType="INPUT" name="IN_DOB"/>
+    <RulePort dataType="Date" order="10" scale="23" precision="10" length="0" mandatory="true" portType="OUTPUT" expression="date_final" name="OUT_DOB"/>
+    <RulePort dataType="String" order="3" scale="4" precision="4" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(Var2,1,4)" name="Yr"/>
+    <RulePort dataType="String" order="6" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="Yr||'-'||Mm||'-'||decode_day" name="date_concat"/>
+    <RulePort dataType="String" order="1" scale="23" precision="23" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="iif(ISNULL(IN_DOB),'1111-11-11',IIF(length(LTRIM(RTRIM(TO_CHAR(IN_DOB))))=0,'1111-11-11',TO_CHAR(IN_DOB,'YYYY-MM-DD')))" name="Var2"/>
+  </Rule>
+</Metadata>

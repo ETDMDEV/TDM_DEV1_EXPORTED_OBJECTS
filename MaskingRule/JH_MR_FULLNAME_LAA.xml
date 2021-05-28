@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_Full_Name" description="JH_Substitution_Masking" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="subst_dict" value="JH_DIC_FullName"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="preprocess_expression" value="UPPER(Input_Column)"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="subst_outcol" value="FULLNAME"/>
+    <RuleParameter name="subst_dict_id" value="206"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="subst_uniquesubstdata" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="subst_seedval" value="12"/>
+    <DictionarySource fileEncoding="7-bit ASCII" description="JH_FullName_Dictionary" tableName="JH_DIC_FullName.dic" dictionaryType="Flat_File" filePath="/opt/informatica/pc961/server/infa_shared/LkpFiles" name="JH_DIC_FullName">
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="FULLNAME"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="SNO"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_FULLNAME_LAA" description="Rule created to handle the MID name for LAA">
+    <RulePort dataType="String" inputPortName="CONCAT_F_M_L" associatedRuleName="JH_MR_Full_Name" order="11" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="M_FML"/>
+    <RulePort dataType="String" order="21" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(M_FML,1,V_LEN_F_FL)" name="F_FML"/>
+    <RulePort dataType="String" order="8" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(ISNULL(FIRST_NM)=0 AND ISNULL(MIDDLE_NM)=0,CONCAT_F_M_L,'NOT1')" name="V_F_NOT_N_M_NOT_N"/>
+    <RulePort dataType="String" order="28" scale="10" precision="30" length="0" mandatory="true" portType="OUTPUT" expression="FINAL_FIRST" name="O_FIRST"/>
+    <RulePort dataType="String" order="0" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="FIRST_NM"/>
+    <RulePort dataType="Numeric" order="13" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="INSTR(M_FL,' ')" name="V_LEN_F_FL"/>
+    <RulePort dataType="String" order="27" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(V_F_M_NULL='NOT' AND V_F_NOT_N_M_NULL='NOT2',F_FML,IIF(V_F_NOT_N_M_NOT_N='NOT1' AND V_F_M_NULL='NOT',M_FL,FIRST_NM))" name="FINAL_FIRST"/>
+    <RulePort dataType="String" order="9" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(ISNULL(FIRST_NM)=0 AND ISNULL(MIDDLE_NM),CONCAT_F_L,'NOT2')" name="V_F_NOT_N_M_NULL"/>
+    <RulePort dataType="Numeric" order="25" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="INSTR(M_FML,' ',1,2)" name="V_REST_FML"/>
+    <RulePort dataType="String" inputPortName="L_NAME1" associatedRuleName="JH_MR_Full_Name" order="7" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="M_L"/>
+    <RulePort dataType="String" order="19" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(M_L,V_LEN_L,(V_LEN-V_LEN_L))" name="L_L"/>
+    <RulePort dataType="String" order="22" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(M_FL,V_LEN_F_FL,(V_LEN_FL-V_LEN_F_FL))" name="L_FL"/>
+    <RulePort dataType="Numeric" order="18" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LENGTH(M_FML)+1" name="V_LEN_FML"/>
+    <RulePort dataType="Numeric" order="15" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LENGTH(M_FL)+1" name="V_LEN_FL"/>
+    <RulePort dataType="String" order="5" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="UPPER(LAST_NM)" name="L_NAME1"/>
+    <RulePort dataType="Numeric" order="16" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="INSTR(M_L,' ')" name="V_LEN_L"/>
+    <RulePort dataType="String" order="20" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(M_FML,V_LEN_F_FML,(V_LEN_FML-V_LEN_F_FML))" name="L_FML"/>
+    <RulePort dataType="String" order="23" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(M_FL,1,V_LEN_F_FL)" name="F_FL"/>
+    <RulePort dataType="String" order="1" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="MIDDLE_NM"/>
+    <RulePort dataType="String" order="29" scale="10" precision="30" length="0" mandatory="true" portType="OUTPUT" expression="FINAL_LAST" name="O_LAST"/>
+    <RulePort dataType="String" order="4" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="UPPER(FIRST_NM)||' '||UPPER(LAST_NM)" name="CONCAT_F_L"/>
+    <RulePort dataType="Numeric" order="17" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="LENGTH(M_L)+1" name="V_LEN"/>
+    <RulePort dataType="String" order="10" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(ISNULL(FIRST_NM) AND ISNULL(MIDDLE_NM),LAST_NM,'NOT')" name="V_F_M_NULL"/>
+    <RulePort dataType="String" order="6" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="UPPER(FIRST_NM)" name="F_NAME1"/>
+    <RulePort dataType="String" order="2" scale="10" precision="10" length="0" mandatory="true" portType="INPUT" name="LAST_NM"/>
+    <RulePort dataType="String" order="24" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(M_L,1,V_LEN_L)" name="F_L"/>
+    <RulePort dataType="String" inputPortName="CONCAT_F_L" associatedRuleName="JH_MR_Full_Name" order="12" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="M_FL"/>
+    <RulePort dataType="String" order="26" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(V_F_M_NULL='NOT' AND V_F_NOT_N_M_NULL='NOT2',L_FML,IIF(V_F_NOT_N_M_NOT_N='NOT1' AND V_F_M_NULL='NOT',LAST_NM,M_L))" name="FINAL_LAST"/>
+    <RulePort dataType="Numeric" order="14" scale="10" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="INSTR(M_FML,' ')" name="V_LEN_F_FML"/>
+    <RulePort dataType="String" order="3" scale="10" precision="30" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="UPPER(FIRST_NM)||' '||UPPER(MIDDLE_NM)||' '||UPPER(LAST_NM)" name="CONCAT_F_M_L"/>
+  </Rule>
+</Metadata>

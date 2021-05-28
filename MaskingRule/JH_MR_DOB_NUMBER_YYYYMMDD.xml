@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_DOB_NUMBER_YYYYMMDD" description="Masking of date of length 8, discarding rest for CIS Flat files. Date format YYYYMMDD">
+    <RulePort dataType="Numeric" order="0" scale="8" precision="10" length="0" mandatory="true" portType="INPUT" name="IN_DOB"/>
+    <RulePort dataType="Numeric" order="5" scale="8" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="TO_INTEGER(VAR_DOB_MASK)" name="VAR_DOB_FINAL"/>
+    <RulePort dataType="String" order="1" scale="8" precision="8" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="iif(LENGTH(LTRIM(RTRIM(TO_CHAR(IN_DOB))))=8,SUBSTR(IN_DOB,7,2),TO_CHAR(IN_DOB))" name="VAR1"/>
+    <RulePort dataType="String" order="2" scale="8" precision="8" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="iif(LENGTH(LTRIM(RTRIM(TO_CHAR(IN_DOB))))=8,SUBSTR(IN_DOB,1,6),TO_CHAR(IN_DOB))" name="VAR2"/>
+    <RulePort dataType="Numeric" order="6" scale="8" precision="10" length="0" mandatory="true" portType="OUTPUT" expression="IIF(LENGTH(LTRIM(RTRIM(TO_CHAR(IN_DOB))))=8,VAR_DOB_FINAL,IN_DOB)" name="OUT_DOB"/>
+    <RulePort dataType="String" order="4" scale="8" precision="8" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="iif(LENGTH(LTRIM(RTRIM(TO_CHAR(IN_DOB))))=8,VAR2||VAR_DD,TO_CHAR(IN_DOB))" name="VAR_DOB_MASK"/>
+    <RulePort dataType="String" order="3" scale="8" precision="8" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(LENGTH(LTRIM(RTRIM(TO_CHAR(VAR1))))=2,TO_CHAR(DECODE(TO_INTEGER(VAR1),01,11,02,12,03,13,04,14,05,15,06,16,07,17,08,18,09,19,10,20,11,21,12,22,13,23,14,24,15,25,16,26,17,27,18,28,19,11,20,12,21,13,22,14,23,15,24,16,25,17,26,18,27,19,28,20,29,21,30,22,31,23,00,00)),TO_CHAR(VAR1))" name="VAR_DD"/>
+  </Rule>
+</Metadata>

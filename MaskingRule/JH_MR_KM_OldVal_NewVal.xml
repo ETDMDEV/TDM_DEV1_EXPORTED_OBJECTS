@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_Organization_Rule" description="JH_Substitution_MAsking ( Organization_Name_New)" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="subst_outcol" value="COMPANY_NAME"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="subst_seedval" value="1"/>
+    <RuleParameter name="subst_dict_id" value="1609"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="subst_uniquesubstdata" value="false"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="subst_dict" value="Organization_Name_New"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="preprocess_expression" value="UPPER(Input_Column)"/>
+    <DictionarySource fileEncoding="7-bit ASCII" tableName="JH_Company_names_new1.dic" dictionaryType="Flat_File" filePath="/opt/informatica/pc961/server/infa_shared/LkpFiles" name="Organization_Name_New">
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="COMPANY_NAME"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="SNO"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_NUMERIC" description="JH_Key_String" dataType="String" maskingType="KEY">
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="keyStr_resChars" value="0123456789"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="keyStr_seed" value="12"/>
+    <RuleParameter name="keyStr_srcChars" value="0123456789"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_Phone_Number" description="JH_Key_Masking" dataType="String" maskingType="KEY">
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="keyStr_srcChars" value="0123456789"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="keyStr_seed" value="12"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="keyStr_resChars" value="0123456789"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_Full_Name" description="JH_Substitution_Masking" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="subst_dict" value="JH_DIC_FullName"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="preprocess_expression" value="UPPER(Input_Column)"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="subst_outcol" value="FULLNAME"/>
+    <RuleParameter name="subst_dict_id" value="206"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="subst_uniquesubstdata" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="subst_seedval" value="12"/>
+    <DictionarySource fileEncoding="7-bit ASCII" description="JH_FullName_Dictionary" tableName="JH_DIC_FullName.dic" dictionaryType="Flat_File" filePath="/opt/informatica/pc961/server/infa_shared/LkpFiles" name="JH_DIC_FullName">
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="FULLNAME"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="SNO"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_Email_Address" description="JH_Email_Masking" dataType="String" maskingType="EMAIL">
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="email_seedVal" value="12"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="email_repeatable" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="email_stdmaskingType" value="true"/>
+    <RuleParameter name="email_advmaskingType" value="false"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_Addr_Line2" description="JH_Substitution_Masking" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="subst_uniquesubstdata" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="subst_outcol" value="ADDRESSLINE2"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="subst_dict" value="JH_DIC_Address"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="subst_dict_id" value="202"/>
+    <RuleParameter name="subst_seedval" value="12"/>
+    <DictionarySource fileEncoding="7-bit ASCII" description="JH_Address_Dictionary" tableName="JH_DIC_Address.dic" dictionaryType="Flat_File" filePath="/opt/informatica/pc961/server/infa_shared/LkpFiles" name="JH_DIC_Address">
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="SNO"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE2"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE3"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE1"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_Addr_Line1" description="JH_Substitution_Masking" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="subst_outcol" value="ADDRESSLINE1"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="subst_dict" value="JH_DIC_Address"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="subst_dict_id" value="202"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="subst_uniquesubstdata" value="false"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="subst_seedval" value="12"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <DictionarySource fileEncoding="7-bit ASCII" description="JH_Address_Dictionary" tableName="JH_DIC_Address.dic" dictionaryType="Flat_File" filePath="/opt/informatica/pc961/server/infa_shared/LkpFiles" name="JH_DIC_Address">
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="SNO"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE2"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE3"/>
+      <DictionaryPort scale="0" length="0" precision="0" dataType="String" nullable="false" name="ADDRESSLINE1"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="JH_MR_SSN" description="JH_Key_Masking" dataType="String" maskingType="KEY">
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="false"/>
+    <RuleParameter name="keyStr_srcChars" value="0123456789"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="keyStr_resChars" value="0123456789"/>
+    <RuleParameter name="keyStr_seed" value="12"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="errhandling_defser" value="true"/>
+    <RuleParameter name="excp_trim" value="true"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_MR_KM_OldVal_NewVal" description="new_value column value masking with respect to table_col_name value">
+    <RulePort dataType="String" order="3" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(Ltrim(RTRIM(value_IN))='' or Ltrim(RTRIM(value_IN))='N/A',value_IN,IIF(Ltrim(Rtrim(tbl_col_nm))='EMAIL Address',Masked_email,IIf(Ltrim(Rtrim(tbl_col_nm))='Contact Name' or &#x9;    Ltrim(Rtrim(tbl_col_nm))='Dealer/IIO Liaison' or &#x9;    Ltrim(Rtrim(tbl_col_nm))='National Accounts Manager' or &#x9;    Ltrim(Rtrim(tbl_col_nm))='Key Account Manager' or Ltrim(Rtrim(tbl_col_nm))='[Team Leader]' or&#x9;    Ltrim(Rtrim(tbl_col_nm))='[Dealer/IIO Liaison]' or &#x9;    Ltrim(Rtrim(tbl_col_nm))='[Key Account Manager]' or Ltrim(Rtrim(tbl_col_nm))='[Operations Manager]' or Ltrim(Rtrim(tbl_col_nm))='[National Accounts Manager]' or Ltrim(Rtrim(tbl_col_nm))='Team Leader' or Ltrim(Rtrim(tbl_col_nm))='Operations Manager',Masked_ContactName,IIF(Ltrim(Rtrim(tbl_col_nm))='Parent Company' or &#x9;&#x9;Ltrim(Rtrim(tbl_col_nm))='Client Name',Masked_ParentCompany,IIF(Ltrim(Rtrim(tbl_col_nm))='Dealer Number',&#x9;&#x9;&#x9;Mask_Dealer_Number,IIF (Ltrim(Rtrim(tbl_col_nm))='FAX NUMBER' or &#x9;&#x9;&#x9;&#x9;Ltrim(Rtrim(tbl_col_nm))='Work Extension' or &#x9;&#x9;&#x9;&#x9;Ltrim(Rtrim(tbl_col_nm))='Work Phone' or &#x9;&#x9;&#x9;&#x9;Ltrim(Rtrim(tbl_col_nm))='Cell Phone' or &#x9;&#x9;&#x9;&#x9;Ltrim(Rtrim(tbl_col_nm))='Phone Number',&#x9;&#x9;&#x9;&#x9;Mask_FaxNumber,IIF(Ltrim(Rtrim(tbl_col_nm))='Address 1',&#x9;&#x9;&#x9;&#x9;&#x9;Mask_Address1,IIF(Ltrim(Rtrim(tbl_col_nm))='Address 2',&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mask_Address2,IIf(Ltrim(Rtrim(tbl_col_nm))='SSN/TIN',&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mask_SSN_TIN,IIf(Ltrim(Rtrim(tbl_col_nm))='Notes' or Ltrim(Rtrim(tbl_col_nm))='Banking Information' or Ltrim(Rtrim(tbl_col_nm))='Commision/12B-1 Notes' or Ltrim(Rtrim(tbl_col_nm))='Contact Description' or Ltrim(Rtrim(tbl_col_nm))='WRAP Program Notes' or Ltrim(Rtrim(tbl_col_nm))='Client Overview','Default Free Form Text',IIF(Ltrim(Rtrim(tbl_col_nm))='[Clearing Firm]' or&#x9;&#x9; &#x9;&#x9;Ltrim(Rtrim(tbl_col_nm))='Clearing Firm', Mask_Clearing_Firm,value_IN)))))))))))" name="OUT_PUT"/>
+    <RulePort dataType="String" inputPortName="value_IN" associatedRuleName="JH_MR_Organization_Rule" order="10" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="Masked_ParentCompany"/>
+    <RulePort dataType="String" inputPortName="Var_org" associatedRuleName="JH_MR_Organization_Rule" order="4" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="Mask_Var_org"/>
+    <RulePort dataType="String" inputPortName="value_IN" associatedRuleName="JH_MR_NUMERIC" order="12" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="Mask_Dealer_Number"/>
+    <RulePort dataType="String" inputPortName="value_IN" associatedRuleName="JH_MR_Phone_Number" order="11" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="Mask_FaxNumber"/>
+    <RulePort dataType="String" inputPortName="value_IN" associatedRuleName="JH_MR_Full_Name" order="13" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="Masked_ContactName"/>
+    <RulePort dataType="String" order="8" scale="0" precision="10" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(value_IN,1,7)" name="Var_Org_code"/>
+    <RulePort dataType="String" order="0" scale="0" precision="50" length="0" mandatory="true" portType="INPUT" name="tbl_col_nm"/>
+    <RulePort dataType="String" inputPortName="value_IN" associatedRuleName="JH_MR_Email_Address" order="5" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="Masked_email"/>
+    <RulePort dataType="String" order="6" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="CONCAT(Var_Org_code,Mask_Var_org)" name="Mask_Clearing_Firm"/>
+    <RulePort dataType="String" inputPortName="value_IN" associatedRuleName="JH_MR_Addr_Line2" order="14" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="Mask_Address2"/>
+    <RulePort dataType="String" order="15" scale="0" precision="100" length="0" mandatory="true" portType="OUTPUT" expression="OUT_PUT" name="VALUE_out"/>
+    <RulePort dataType="String" order="1" scale="0" precision="100" length="0" mandatory="true" portType="INPUT" name="value_IN"/>
+    <RulePort dataType="String" order="2" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="SUBSTR(value_IN,8)" name="Var_org"/>
+    <RulePort dataType="String" inputPortName="value_IN" associatedRuleName="JH_MR_Addr_Line1" order="7" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="Mask_Address1"/>
+    <RulePort dataType="String" inputPortName="value_IN" associatedRuleName="JH_MR_SSN" order="9" scale="0" precision="100" length="0" mandatory="true" portType="LOCAL_VARIABLE" name="Mask_SSN_TIN"/>
+  </Rule>
+</Metadata>

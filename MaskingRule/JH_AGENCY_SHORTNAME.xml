@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Rule" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="false" name="JH_AGENCY_SHORTNAME">
+    <RulePort dataType="String" order="3" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="IIF(LENGTH(LTRIM(RTRIM(GIVENNM)))=0 or ISNULL(GIVENNM),SURNM,nameCONCAT)" name="MATCH"/>
+    <RulePort dataType="String" order="0" scale="20" precision="20" length="0" mandatory="true" portType="INPUT" name="GIVENNM"/>
+    <RulePort dataType="String" order="2" scale="40" precision="40" length="0" mandatory="true" portType="LOCAL_VARIABLE" expression="CONCAT(SURNM,CONCAT(', ',GIVENNM))" name="nameCONCAT"/>
+    <RulePort dataType="String" order="1" scale="40" precision="40" length="0" mandatory="true" portType="INPUT" name="SURNM"/>
+    <RulePort dataType="String" order="4" scale="40" precision="40" length="0" mandatory="true" portType="OUTPUT" expression="MATCH" name="OUTPUT"/>
+  </Rule>
+</Metadata>

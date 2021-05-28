@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Metadata xmlns="http://www.informatica.com/ilm/pdmds/xml/model" type="Policy" version="10.4.1;null;32;20833">
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Last Name Rule" description="Rule to mask Last Name" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="subst_outcol" value="LASTNAME"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="subst_dict_id" value="14"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="subst_dict" value="lastNames.dic"/>
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="subst_seedval" value="1"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="subst_uniquesubstdata" value="true"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <DictionarySource fileEncoding="7-bit ASCII" tableName="lastNames.dic" dictionaryType="Flat_File" filePath="C:\Informatica\9.5.0\server\infa_shared\LkpFiles" name="lastNames.dic">
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="LASTNAME"/>
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="SNO"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Medical Record Number Rule" description="Rule to mask Medical Record Numbers" dataType="String" maskingType="KEY">
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="keyStr_resChars" value="1234567890"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="keyStr_srcChars" value="1234567890"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="keyStr_seed" value="1"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Phone Number Rule" description="Rule to mask Phone Numbers. Can be used to mask Fax Numbers as well" dataType="String" maskingType="PHONE">
+    <RuleParameter name="phone_repeatable" value="true"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="phone_seed" value="1"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="ZIP Rule" description="Rule to mask ZIP Codes" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="subst_seedval" value="1"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="postprocess_expression"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="subst_dict" value="Address91.dic"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="seed_value_is_param" value="false"/>
+    <RuleParameter name="subst_uniquesubstdata" value="false"/>
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="preprocess_expression"/>
+    <RuleParameter name="subst_dict_id" value="7"/>
+    <RuleParameter name="subst_outcol" value="ZIP"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <DictionarySource fileEncoding="7-bit ASCII" tableName="Address91.dic" dictionaryType="Flat_File" filePath="C:\Informatica\9.5.0\server\infa_shared\LkpFiles" name="Address91.dic">
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="SNO"/>
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="ZIP"/>
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="STREET"/>
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="STATE"/>
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="CITY"/>
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="COUNTRY"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="WEB URL Rule" description="Rule to mask URLs" dataType="String" maskingType="URL">
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="url_seed" value="1"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="url_repeatable" value="true"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Birth Date Rule" description="Rule to mask date of birth" dataType="Date" maskingType="RANDOM">
+    <RuleParameter name="randDate_blurring" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="randDate_minblur" value="1000"/>
+    <RuleParameter name="randDate_range" value="false"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="randDate_BlurUnit" value="Day"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="randDate_maxblur" value="1000"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Social Security Number Rule" description="Rule to mask social security number" dataType="String" maskingType="SSN">
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="ssn_repeatable" value="true"/>
+    <RuleParameter name="ssn_seed" value="1"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Unique Identifying Number Rule" description="Rule to mask Identifying Numbers" dataType="Numeric" maskingType="KEY">
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="keyNum_seed" value="1"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Account Number Rule" description="Rule to mask Account Numbers" dataType="String" maskingType="KEY">
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="keyStr_seed" value="1"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="keyStr_resChars" value="1234567890"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="keyStr_srcChars" value="1234567890"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Primary Account Number Rule" description="Rule to mask Primary Account Number" dataType="String" maskingType="KEY">
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="keyStr_resChars" value="1234567890"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="keyStr_srcChars" value="1234567890"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="keyStr_seed" value="1"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Email Address Rule" description="Rule to mask Email Address" dataType="String" maskingType="EMAIL">
+    <RuleParameter name="email_advmaskingType" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="email_stdmaskingType" value="true"/>
+    <RuleParameter name="email_seedVal" value="1"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="email_repeatable" value="true"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="IP Address Rule" description="Rule to mask IP Addresses" dataType="String" maskingType="IPADDRESS">
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="ip_repeatable" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="ip_seed" value="1"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Certificate License Number Rule" description="Rule to mask a Certificate License Number" dataType="String" maskingType="KEY">
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="keyStr_seed" value="1"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="keyStr_srcChars" value="1234567890"/>
+    <RuleParameter name="keyStr_resChars" value="1234567890"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Health Plan Beneficiary Number Rule" description="Rule to mask Health Plan Beneficiary" dataType="String" maskingType="KEY">
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="keyStr_resChars" value="1234567890"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="keyStr_srcChars" value="1234567890"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="keyStr_seed" value="1"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="State Rule" description="Rule to mask States" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="subst_dict_id" value="20"/>
+    <RuleParameter name="subst_outcol" value="STATENAME"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="subst_dict" value="stateNames.dic"/>
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="subst_seedval" value="1"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="subst_uniquesubstdata" value="true"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <DictionarySource fileEncoding="7-bit ASCII" tableName="stateNames.dic" dictionaryType="Flat_File" filePath="C:\Informatica\9.5.0\server\infa_shared\LkpFiles\stateNames.dic" name="stateNames.dic">
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="STATENAME"/>
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="SNO"/>
+    </DictionarySource>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="Device Identifier Serial Number Rule" description="Rule to mask Device Identifier Serial Number" dataType="String" maskingType="KEY">
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="keyStr_srcCombo" value="Mask_Only"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="keyStr_maskFormat"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="keyStr_resCombo" value="Use_Only"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="keyStr_seed" value="1"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="keyStr_res_chk" value="true"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="keyStr_srcChars" value="1234567890"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <RuleParameter name="keyStr_resChars" value="1234567890"/>
+    <RuleParameter name="keyStr_src_chk" value="true"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+  </Rule>
+  <Rule xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" overideAble="true" name="First Name Rule" description="Rule to mask First Name" dataType="String" maskingType="SUBSTITUTION">
+    <RuleParameter name="excp_nullspacetreat" value="false"/>
+    <RuleParameter name="errhandling_ignore" value="true"/>
+    <RuleParameter name="subst_fileencoding" value="7-bit ASCII"/>
+    <RuleParameter name="errhandling_errout" value="false"/>
+    <RuleParameter name="excp_nullspaceignore" value="true"/>
+    <RuleParameter name="subst_uniquesubstdata" value="true"/>
+    <RuleParameter name="excp_nullspacedefser" value="false"/>
+    <RuleParameter name="subst_dict_id" value="12"/>
+    <RuleParameter name="subst_relational" value="false"/>
+    <RuleParameter name="subst_snocol" value="SNO"/>
+    <RuleParameter name="errhandling_logexcp" value="false"/>
+    <RuleParameter name="errhandling_const" value="false"/>
+    <RuleParameter name="excp_nullspaceconst" value="false"/>
+    <RuleParameter name="subst_flatfile" value="true"/>
+    <RuleParameter name="errhandling_defser" value="false"/>
+    <RuleParameter name="excp_nullspacelogerr" value="false"/>
+    <RuleParameter name="subst_dict" value="firstNames.dic"/>
+    <RuleParameter name="subst_outcol" value="FIRSTNAME"/>
+    <RuleParameter name="subst_seedval" value="1"/>
+    <RuleParameter name="subst_repeatable" value="true"/>
+    <RuleParameter name="excp_trim" value="false"/>
+    <DictionarySource fileEncoding="7-bit ASCII" tableName="firstNames.dic" dictionaryType="Flat_File" filePath="C:\Informatica\9.5.0\server\infa_shared\LkpFiles" name="firstNames.dic">
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="FIRSTNAME"/>
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="GENDER"/>
+      <DictionaryPort scale="0" length="0" precision="0" nullable="false" name="SNO"/>
+    </DictionarySource>
+  </Rule>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Last Name Rule" active="true" description="Data Domain that marks a column as a Last Name" name="Last Name Domain">
+    <DataPattern>^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$</DataPattern>
+    <MetaDataPattern>(?i)(l(ast|st)?_?(name|nme|nm))</MetaDataPattern>
+    <PrefferedRule>Last Name Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Medical Record Number Rule" active="true" description="Data Domain that marks a column as a Medical Record Number" name="Medical Record Number Domain">
+    <DataPattern>^([0-9]{6}[\s\-]{1}[0-9]{12}|[0-9]{18})$</DataPattern>
+    <MetaDataPattern>(?i)((medical|med)_?(rec|record)_?(number|num|nbr|no))</MetaDataPattern>
+    <PrefferedRule>Medical Record Number Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Phone Number Rule" active="true" description="Data Domain that marks a column as a Phone" name="Phone Domain">
+    <DataPattern>^[2-9]\d{2}-\d{3}-\d{4}$</DataPattern>
+    <MetaDataPattern>(?i)(work|pager|mobile|fax|phone)_?(no|num|nbr|number)</MetaDataPattern>
+    <PrefferedRule>Phone Number Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="ZIP Rule" active="true" description="Data Domain that marks a column as a Zip Code" name="ZIP Domain">
+    <DataPattern>^\d{5}-\d{4}|\d{5}|[A-Z]\d[A-Z] \d[A-Z]\d$</DataPattern>
+    <MetaDataPattern>(?i:.*(zip|postal|post_code|area_code).*)</MetaDataPattern>
+    <PrefferedRule>ZIP Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="High" defaultRuleName="WEB URL Rule" active="true" description="Data Domain that marks a column as a URL" name="Web URL Domain">
+    <DataPattern>(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?</DataPattern>
+    <MetaDataPattern>(?i)url|web(?!(.*yn|.*count|.*version|.*server|.*casting))</MetaDataPattern>
+    <PrefferedRule>WEB URL Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Birth Date Rule" active="true" description="Data Domain that marks a column as a Birth Date" name="Birth Date Domain">
+    <DataPattern>((\d{2})|(\d))\/((\d{2})|(\d))\/((\d{4})|(\d{2}))</DataPattern>
+    <MetaDataPattern>(?i:.*((brth|birth)_?(dt|day|date))|.*((date|dt)?_?of?_?(brth|birth))|^dob$|^brth$|^birth$)</MetaDataPattern>
+    <PrefferedRule>Birth Date Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Social Security Number Rule" active="true" description="Data Domain that marks a column as a Social Security Number" name="Social Security Number Domain">
+    <DataPattern>^\d{3}-\d{2}-\d{4}$</DataPattern>
+    <MetaDataPattern>(?i)(ssn)|((ssn|social)-?(sec|security)-?(num|no|id|nbr))</MetaDataPattern>
+    <PrefferedRule>Social Security Number Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Unique Identifying Number Rule" active="true" description="Data Domain that marks a column as a Unique Identifier" name="Unique Identifier Domain">
+    <PrefferedRule>Unique Identifying Number Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Account Number Rule" active="true" description="Data Domain that marks a column as an Account Number" name="Account Number Domain">
+    <DataPattern>^(\d){8}$</DataPattern>
+    <MetaDataPattern>(?i)(a(cct|ccount)_?(number|num|nbr|no))</MetaDataPattern>
+    <PrefferedRule>Account Number Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Primary Account Number Rule" active="true" description="Data Domain that marks a column as an Account Number" name="Primary Account Number Domain">
+    <DataPattern>^((0[0-9])|(1[0-2])|(2[1-9])|(3[0-2])|(6[1-9])|(7[0-2])|80)([0-9]{7})$</DataPattern>
+    <MetaDataPattern>(?i)(a(cct|ccount)_?(number|num|nbr|no))</MetaDataPattern>
+    <PrefferedRule>Primary Account Number Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Email Address Rule" active="true" description="Data Domain that marks the column as an Email Address" name="Email Address Domain">
+    <DataPattern>^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$</DataPattern>
+    <MetaDataPattern>(?i).*email.*addr(ess)?(?!(.*type|.*id))</MetaDataPattern>
+    <PrefferedRule>Email Address Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="High" defaultRuleName="IP Address Rule" active="true" description="Data Domain that marks a column as an IP Address" name="IP Address Domain">
+    <DataPattern>^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])$</DataPattern>
+    <MetaDataPattern>(?i)ip_?addr(?!(.*yn|.*count))</MetaDataPattern>
+    <PrefferedRule>IP Address Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Certificate License Number Rule" active="true" description="Data Domain that marks a column as a Certificate License Number" name="Certificate License Number Domain">
+    <DataPattern>^[A-Z]{1}\d{7}$</DataPattern>
+    <MetaDataPattern>(?i)((cert)_?(lic|license|licns)_?(number|num|nbr|no))</MetaDataPattern>
+    <PrefferedRule>Certificate License Number Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Health Plan Beneficiary Number Rule" active="true" description="Data Domain that marks a column as  Health Plan Beneficiary" name="Health Plan Beneficiary Number Domain">
+    <DataPattern>^([0-9]{6}[\s\-]{1}[0-9]{12}|[0-9]{18})$</DataPattern>
+    <MetaDataPattern>(?i)((plan|pln)_?(ben|beneficiary))</MetaDataPattern>
+    <PrefferedRule>Health Plan Beneficiary Number Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="State Rule" active="true" description="Data Domain that marks a column as a State" name="State Domain">
+    <DataPattern>^((AL)|(AK)|(AS)|(AZ)|(AR)|(CA)|(CO)|(CT)|(DE)|(DC)|(FM)|(FL)|(GA)|(GU)|(HI)|(ID)|(IL)|(IN)|(IA)|(KS)|(KY)|(LA)|(ME)|(MH)|(MD)|(MA)|(MI)|(MN)|(MS)|(MO)|(MT)|(NE)|(NV)|(NH)|(NJ)|(NM)|(NY)|(NC)|(ND)|(MP)|(OH)|(OK)|(OR)|(PW)|(PA)|(PR)|(RI)|(SC)|(SD)|(TN)|(TX)|(UT)|(VT)|(VI)|(VA)|(WA)|(WV)|(WI)|(WY))$</DataPattern>
+    <MetaDataPattern>(?i)(state|state_code|state_cd|STATE)</MetaDataPattern>
+    <PrefferedRule>State Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="Device Identifier Serial Number Rule" active="true" description="Data Domain that marks a column as a Device Identifier Serial Number" name="Device Identifier Serial Number Domain">
+    <DataPattern>^([A-Z0-9?.+-])+([,]([A-Z0-9?.+-])+)*$</DataPattern>
+    <MetaDataPattern>(?i)(d(evice|ev)_?(ident|id|identifier)_?(ser|serial|srl)_?(number|num|nbr|no))</MetaDataPattern>
+    <PrefferedRule>Device Identifier Serial Number Rule</PrefferedRule>
+  </DataDomain>
+  <DataDomain xmlns="http://www.informatica.com/ilm/pdmds/xml/model" severityLevelName="Low" defaultRuleName="First Name Rule" active="true" description="Data Domain that marks a column as First Name" name="First Name Domain">
+    <DataPattern>^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$</DataPattern>
+    <MetaDataPattern>(?i)(f(irst|rst)?_?(name|nme|nm))</MetaDataPattern>
+    <PrefferedRule>First Name Rule</PrefferedRule>
+  </DataDomain>
+  <Policy xmlns="http://www.informatica.com/ilm/pdmds/xml/model" active="true" description="This is the policy that has the data domains associated with Protected Health Information" name="PHI Policy Pack">
+    <DataDomain>Last Name Domain</DataDomain>
+    <DataDomain>Medical Record Number Domain</DataDomain>
+    <DataDomain>Phone Domain</DataDomain>
+    <DataDomain>ZIP Domain</DataDomain>
+    <DataDomain>Web URL Domain</DataDomain>
+    <DataDomain>Birth Date Domain</DataDomain>
+    <DataDomain>Social Security Number Domain</DataDomain>
+    <DataDomain>Unique Identifier Domain</DataDomain>
+    <DataDomain>Account Number Domain</DataDomain>
+    <DataDomain>Primary Account Number Domain</DataDomain>
+    <DataDomain>Email Address Domain</DataDomain>
+    <DataDomain>IP Address Domain</DataDomain>
+    <DataDomain>Certificate License Number Domain</DataDomain>
+    <DataDomain>Health Plan Beneficiary Number Domain</DataDomain>
+    <DataDomain>State Domain</DataDomain>
+    <DataDomain>Device Identifier Serial Number Domain</DataDomain>
+    <DataDomain>First Name Domain</DataDomain>
+  </Policy>
+</Metadata>
