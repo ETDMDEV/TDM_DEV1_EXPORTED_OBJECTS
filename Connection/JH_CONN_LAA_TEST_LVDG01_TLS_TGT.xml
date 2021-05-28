@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="Oracle" description="" name="JH_CONN_LAA_TEST_LVDG01_TLS_TGT">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="TDM_Developers"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:oracle://AZLDBNSASORA15.mfcgd.com:1856;SID=LVDG01;EncryptionMethod=SSL;CryptoProtocolVersion=TLSv1.2;ValidateServerCertificate=False"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="basumsr"/>
+    <ConnectionProperty name="Username" value="SVCTDMID"/>
+    <ConnectionProperty name="Enable Parallel Mode" value="false"/>
+    <ConnectionProperty name="Connect String" value="LVDG01_TLS"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="iSuE0W5WEtBxzIKWK1YNgg=="/>
+  </Connection>
+</Connections>

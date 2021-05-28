@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="PWX_NRDB_BATCH" description="" name="PWX_TGT_C090_SEQ">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Compression" value="false"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Interpret as Rows" value="true"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="Convert Character Data To String" value="false"/>
+    <ConnectionProperty name="Retrieve PWX log entries" value="true"/>
+    <ConnectionProperty name="Worker Threads" value="0"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="velamsi"/>
+    <ConnectionProperty name="Encryption Type" value="none"/>
+    <ConnectionProperty name="Username" value="svctdm"/>
+    <ConnectionProperty name="Pacing size" value="0"/>
+    <ConnectionProperty name="Offload Processing" value="no"/>
+    <ConnectionProperty name="Encryption Level" value="1"/>
+    <ConnectionProperty name="Write Mode" value="write-on"/>
+    <ConnectionProperty name="Array size" value="25"/>
+    <ConnectionProperty name="Code Page" value="7-bit ASCII"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="qOYNzxIIOhwbPjQ2dFyK7g=="/>
+    <ConnectionProperty name="Location" value="C090"/>
+  </Connection>
+</Connections>

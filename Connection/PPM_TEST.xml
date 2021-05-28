@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="Oracle" description="" name="PPM_TEST">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:oracle://AZLDBNSASORA15.mfcgd.com:1956;SID=TDMDZ"/>
+    <ConnectionProperty name="Connection Environment SQL" value="SET QUOTED_IDENTIFIER ON"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="dasaanu"/>
+    <ConnectionProperty name="Username" value="PPM"/>
+    <ConnectionProperty name="Enable Parallel Mode" value="false"/>
+    <ConnectionProperty name="Connect String" value="TDMDZ"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="7-bit ASCII"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="jS1sUcY0hGigGeJE4UpLOQ=="/>
+  </Connection>
+</Connections>

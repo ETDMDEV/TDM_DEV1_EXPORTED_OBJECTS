@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="DB2" description="B04DB2D03, PENDBD40" name="JH_CONN_TGT_SPRNT_B04DB2D03_PENDBD40">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:db2://B04DB2D03.dev.manulifeusa.com:50501;databaseName=PENDBD40;EncryptionMethod=SSL;TrustStore=/opt/informatica/pc102/db2_ssl/sslkeys/keydb_sprnt_d03.jks;TrustStorePassword=M@nu1if3dEv;logTName=yes;timestamp=yes)"/>
+    <ConnectionProperty name="DB2 Native" value="Native"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="velamsi"/>
+    <ConnectionProperty name="Username" value="svctdmid"/>
+    <ConnectionProperty name="Connect String" value="PENDBD40"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="hVTJJwq0jZJz9IjMPAySEw=="/>
+  </Connection>
+</Connections>

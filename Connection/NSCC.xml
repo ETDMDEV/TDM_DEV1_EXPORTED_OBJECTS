@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="ODBC" description="" name="NSCC">
+    <ConnectionProperty name="Connection Environment SQL" value=""/>
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Type" value="ODBC"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Transaction Environment SQL" value=""/>
+    <ConnectionProperty name="OWNER_USERNAME" value="Administrator"/>
+    <ConnectionProperty name="Username" value="infanscc"/>
+    <ConnectionProperty name="Connect String" value="NSCC"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="Name" value="NSCC"/>
+  </Connection>
+</Connections>

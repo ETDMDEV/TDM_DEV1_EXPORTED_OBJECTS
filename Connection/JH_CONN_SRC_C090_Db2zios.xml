@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="PWX_DB2i5OS" description="C090_Db2zios_Source_Connection" name="JH_CONN_SRC_C090_Db2zios">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Compression" value="false"/>
+    <ConnectionProperty name="Database name" value="DB2T"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Isolation Level" value="none"/>
+    <ConnectionProperty name="Interpret as Rows" value="true"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="Convert Character Data To String" value="false"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="velamsi"/>
+    <ConnectionProperty name="Encryption Type" value="none"/>
+    <ConnectionProperty name="Username" value="SVCTDM"/>
+    <ConnectionProperty name="Pacing size" value="0"/>
+    <ConnectionProperty name="Encryption Level" value="1"/>
+    <ConnectionProperty name="Write Mode" value="write-on"/>
+    <ConnectionProperty name="Array size" value="25"/>
+    <ConnectionProperty name="Code Page" value="UTF-8 encoding of Unicode"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="d3s0HjbhQzMEatBpQxENXg=="/>
+    <ConnectionProperty name="Location" value="C090"/>
+  </Connection>
+</Connections>

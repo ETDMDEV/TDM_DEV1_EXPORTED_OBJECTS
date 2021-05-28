@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="Oracle" description="" name="JH_CONN_LAA_LIFED01_DZ">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="Name" value="JH_CONN_LAA_LIFED01_DZ"/>
+    <ConnectionProperty name="Connection Environment SQL" value=""/>
+    <ConnectionProperty name="Type" value="Oracle"/>
+    <ConnectionProperty name="Transaction Environment SQL" value=""/>
+    <ConnectionProperty name="OWNER_USERNAME" value="Administrator"/>
+    <ConnectionProperty name="Username" value="SVCTDMID"/>
+    <ConnectionProperty name="Enable Parallel Mode" value="0"/>
+    <ConnectionProperty name="Connect String" value="LIFED01"/>
+    <ConnectionProperty name="Rollback Segment" value=""/>
+    <ConnectionProperty name="Code Page" value="UTF-8 encoding of Unicode"/>
+  </Connection>
+</Connections>

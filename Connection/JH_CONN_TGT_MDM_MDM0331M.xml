@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="DB2" description="AZULVSASDB2M10,MDM0331M" name="JH_CONN_TGT_MDM_MDM0331M">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="TDM_Developers"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:db2://AZULVSASDB2M10.mfcgd.com:50501;databaseName=MDM0331M;EncryptionMethod=SSL;TrustStore=/opt/informatica/pc102/db2_ssl/sslkeys/Azum10_2020_invltm02.jks;TrustStorePassword=MJan$!~c0ckM0d;logTName=yes;timestamp=yes)"/>
+    <ConnectionProperty name="DB2 Native" value="Native"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="nathmso"/>
+    <ConnectionProperty name="Username" value="mfcgd\svctdmid"/>
+    <ConnectionProperty name="Custom Driver Name" value="com.informatica.jdbc.db2.DB2Driver"/>
+    <ConnectionProperty name="Connect String" value="MDM0331M"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="Yo9HA2qtvdpHPOQClRjVdA=="/>
+  </Connection>
+</Connections>

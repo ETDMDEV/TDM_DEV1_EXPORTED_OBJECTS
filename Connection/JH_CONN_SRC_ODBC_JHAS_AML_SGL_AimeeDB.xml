@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="ODBC" description="JHAS_AML_SGL_AimeeDB_SRC_CONN" name="JH_CONN_SRC_ODBC_JHAS_AML_SGL_AimeeDB">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="ODBC Provider" value="ms-sql-server"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="velamsi"/>
+    <ConnectionProperty name="Username" value="svcTDMid"/>
+    <ConnectionProperty name="Connect String" value="JHJHST59_SGL_AimeeDB"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="sYpltf8tuJbxwEQqDnjX0g=="/>
+  </Connection>
+</Connections>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="DB2" description="DB2 CONNECTION FOR DROPZONE DATABASE DVLTD10" name="JH_CONN_LTC_NLZ_CPM_DVLTD10">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="TDM_Developers"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:db2://AZULVSASDB2D09.mfcgd.com:50526;databaseName=dvltd10;EncryptionMethod=SSL;TrustStore=/opt/informatica/pc102/db2_ssl/sslkeys/Azud09_invltd10.jks;TrustStorePassword=DManu$lif3dEv;SpyAttributes=(log=(file)/opt/informatica/pc102/spy2.log;logTName=yes;timestamp=yes)"/>
+    <ConnectionProperty name="DB2 Native" value="Native"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="mukhesh"/>
+    <ConnectionProperty name="Username" value="SVCTDMID"/>
+    <ConnectionProperty name="Custom Driver Name" value="com.informatica.jdbc.db2.DB2Driver"/>
+    <ConnectionProperty name="Connect String" value="DVLTD10"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="7-bit ASCII"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="Yo9HA2qtvdpHPOQClRjVdA=="/>
+  </Connection>
+</Connections>

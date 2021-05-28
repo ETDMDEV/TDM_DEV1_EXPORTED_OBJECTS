@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="DB2" description="NEW SOURCE CONNECTION FOR OPT" name="JH_CONN_SRC_CARE_601DB2M01_GLTDBZ10">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:db2://AZUWVSASDB2M01:50505;databaseName=GLTDBZ10"/>
+    <ConnectionProperty name="DB2 Native" value="Native"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="dasaanu"/>
+    <ConnectionProperty name="Username" value="SVCTDMID"/>
+    <ConnectionProperty name="Connect String" value="GLTDBZ10"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="LecTQXwC1CLMAgnkqrA7DA=="/>
+  </Connection>
+</Connections>

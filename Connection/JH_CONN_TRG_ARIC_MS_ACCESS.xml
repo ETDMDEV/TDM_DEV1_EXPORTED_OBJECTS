@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="ODBC" description="ARIC_MSACCESS_TARGET_CONNECITON" name="JH_CONN_TRG_ARIC_MS_ACCESS">
+    <ConnectionProperty name="Connection Environment SQL" value="SET QUOTED_IDENTIFIER ON"/>
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="ODBC Provider" value="other"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="velamsi"/>
+    <ConnectionProperty name="Username" value="dummy"/>
+    <ConnectionProperty name="Connect String" value="ARICDATA_TGT"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="uWcpfDO3Hf/xqkdfq5Opog=="/>
+  </Connection>
+</Connections>

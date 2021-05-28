@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="DB2" description="DB2 Target Connection for testing" name="DB2_Target_Fatin">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:db2://ANDDB2D01:50003;databaseName=DMASKD1"/>
+    <ConnectionProperty name="DB2 Native" value="Native"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="ahmadfa"/>
+    <ConnectionProperty name="Username" value="ahmadfa"/>
+    <ConnectionProperty name="Connect String" value="DMASKD1"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty name="Code Page" value="7-bit ASCII"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="s5yiSnNM+nR89o8ZMRkbqw=="/>
+  </Connection>
+</Connections>

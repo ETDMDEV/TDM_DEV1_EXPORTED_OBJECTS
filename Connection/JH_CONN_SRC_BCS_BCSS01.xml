@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="Oracle" description="BCS_SOURCE_CONNECTION" name="JH_CONN_SRC_BCS_BCSS01">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:oracle://b04orad10:1956;SID=bcss01"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="velamsi"/>
+    <ConnectionProperty name="Username" value="bcs_owner"/>
+    <ConnectionProperty name="Enable Parallel Mode" value="false"/>
+    <ConnectionProperty name="Connect String" value="BCSS01"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty name="Code Page" value="UTF-8 encoding of Unicode"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="QT9Xxtge91Mv7yzCb4+7jQ=="/>
+  </Connection>
+</Connections>

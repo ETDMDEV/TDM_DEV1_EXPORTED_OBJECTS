@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="DB2" description="AZULVSASDB2D04, DMDMM03" name="JH_CONN_SRC_MDM_DMDMM03">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:db2://AZULVSASDB2D04.mfcgd.com:50519;databaseName=DMDMM03;EncryptionMethod=SSL;TrustStore=/DATA_INF_TDM/INFA_SHARED_TDM/SrcFiles/Azum04_inmdmm02.jks;TrustStorePassword=MJan$!~c0ckM0d;;SpyAttributes=(log=(file)/opt/informatica/pc102/spy3.log;logTName=yes;timestamp=yes)"/>
+    <ConnectionProperty name="DB2 Native" value="Native"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="rajrish"/>
+    <ConnectionProperty name="Username" value="mfcgd\svctdmid"/>
+    <ConnectionProperty name="Connect String" value="DMDMM03"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="AXDlInYL+2kks1E8AcgTlg=="/>
+  </Connection>
+</Connections>

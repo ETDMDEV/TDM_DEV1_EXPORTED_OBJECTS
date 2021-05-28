@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="ODBC" description="" name="JH_CONN_ODBC_TGT_DATAHUB_JHINST80_jhiTransientDev2">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="ODBC Provider" value="ms-sql-server"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="Support Mixed Case Identifiers" value="false"/>
+    <ConnectionProperty name="Connection Environment SQL" value="Set QUOTED_IDENTIFIER ON"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="nathmso"/>
+    <ConnectionProperty name="Username" value="svcTDMid"/>
+    <ConnectionProperty name="Connect String" value="jhiTransientDev2_JHINST80"/>
+    <ConnectionProperty name="SQL Identifier To Use" value="4"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="UTF-8 encoding of Unicode"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="sYpltf8tuJbxwEQqDnjX0g=="/>
+  </Connection>
+</Connections>

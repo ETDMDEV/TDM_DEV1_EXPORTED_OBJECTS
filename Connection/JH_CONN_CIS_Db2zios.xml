@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="PWX_DB2i5OS" description="" name="JH_CONN_CIS_Db2zios">
+    <ConnectionProperty name="PWX Override" value=""/>
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Compression" value="NO"/>
+    <ConnectionProperty name="IsolationLevel" value="1"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Interpret as Rows" value="1"/>
+    <ConnectionProperty name="Name" value="JH_CONN_CIS_Db2zios"/>
+    <ConnectionProperty name="Database Name" value="DB2T"/>
+    <ConnectionProperty name="Write Mode" value="1"/>
+    <ConnectionProperty name="Reject File" value=""/>
+    <ConnectionProperty name="Code Page" value="UTF-8 encoding of Unicode"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="3vnSucPpSo3Lvo9TIswAQw=="/>
+    <ConnectionProperty name="Environment SQL" value=""/>
+    <ConnectionProperty name="Pacing Size" value="0"/>
+    <ConnectionProperty name="Convert character data to string" value="NO"/>
+    <ConnectionProperty name="Database file overrides" value=""/>
+    <ConnectionProperty name="Array Size" value="25"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="Type" value="PWX DB2i5OS"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="velamsi"/>
+    <ConnectionProperty name="Encryption Type" value="0"/>
+    <ConnectionProperty name="Username" value="SVCTDM"/>
+    <ConnectionProperty name="Connect String" value="JH_CONN_CIS_Db2zios"/>
+    <ConnectionProperty name="Library List" value=""/>
+    <ConnectionProperty name="Encryption Level" value="1"/>
+    <ConnectionProperty name="Location" value="C090"/>
+  </Connection>
+</Connections>

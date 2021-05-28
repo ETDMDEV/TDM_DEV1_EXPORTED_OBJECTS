@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="Microsoft SQL Server" description="" name="JH_CONN_NSCC_JDBC_TGT_AZWDBNSQLNSCCD1_NSCCp1">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Database name" value="dbNSCCp1"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Use DSN" value="false"/>
+    <ConnectionProperty name="Use trusted connection" value="false"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:sqlserver://10.224.38.4:1433;SelectMethod=cursor;databaseName=dbNSCCp1"/>
+    <ConnectionProperty name="Connection Environment SQL" value="SET QUOTED_IDENTIFIER ON"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="dasaanu"/>
+    <ConnectionProperty name="Username" value="SVCTDMID"/>
+    <ConnectionProperty name="Connect String" value="AZWDBNSQLNSCCD1@dbNSCCp1"/>
+    <ConnectionProperty name="Packet size" value="0"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="sYpltf8tuJbxwEQqDnjX0g=="/>
+    <ConnectionProperty name="Server name" value="AZWDBNSQLNSCCD1"/>
+  </Connection>
+</Connections>

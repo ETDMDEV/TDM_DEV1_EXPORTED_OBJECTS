@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="ODBC" description="" name="sfasdfsa">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="ODBC Provider" value="sybase"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="velamsi"/>
+    <ConnectionProperty name="Username" value="sadfs"/>
+    <ConnectionProperty name="Connect String" value="adsfsd"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="7-bit ASCII"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="SSKd8l/EnHaf5MytnfwvcQ=="/>
+  </Connection>
+</Connections>

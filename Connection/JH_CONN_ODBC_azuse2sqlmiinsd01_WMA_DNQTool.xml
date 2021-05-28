@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="ODBC" description="" name="JH_CONN_ODBC_azuse2sqlmiinsd01_WMA_DNQTool">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="ODBC Provider" value="ms-sql-server"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="TDM_Developers"/>
+    <ConnectionProperty name="Support Mixed Case Identifiers" value="false"/>
+    <ConnectionProperty name="Connection Environment SQL" value="SET QUOTED_IDENTIFIER ON"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="bassaik"/>
+    <ConnectionProperty name="Username" value="svctdmid"/>
+    <ConnectionProperty name="Connect String" value="azuse2sqlmiinsd01_WMA_DNQTool"/>
+    <ConnectionProperty name="SQL Identifier To Use" value="4"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="UTF-8 encoding of Unicode"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="sYpltf8tuJbxwEQqDnjX0g=="/>
+  </Connection>
+</Connections>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="PWX_NRDB_BATCH" description="" name="JH_CONN_NRDB_TGT_PALLM">
+    <ConnectionProperty name="PWX Override" value=""/>
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Compression" value="NO"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Pacing Size" value="0"/>
+    <ConnectionProperty name="Convert character data to string" value="NO"/>
+    <ConnectionProperty name="Interpret as Rows" value="1"/>
+    <ConnectionProperty name="Array Size" value="25"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="Name" value="JH_CONN_NRDB_TGT_PALLM"/>
+    <ConnectionProperty name="Retrieve PWX log entries" value="YES"/>
+    <ConnectionProperty name="Type" value="PWX NRDB Batch"/>
+    <ConnectionProperty name="Worker Threads" value="0"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="Administrator"/>
+    <ConnectionProperty name="Username" value="SVCTDM"/>
+    <ConnectionProperty name="Encryption Type" value="none"/>
+    <ConnectionProperty name="Connect String" value="JH_CONN_NRDB_TGT_PALLM"/>
+    <ConnectionProperty name="Offload Processing" value="0"/>
+    <ConnectionProperty name="Encryption Level" value="1"/>
+    <ConnectionProperty name="Write Mode" value="1"/>
+    <ConnectionProperty name="Code Page" value="7-bit ASCII"/>
+    <ConnectionProperty name="Location" value="DB2PWEX"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="3vnSucPpSo3Lvo9TIswAQw=="/>
+  </Connection>
+</Connections>

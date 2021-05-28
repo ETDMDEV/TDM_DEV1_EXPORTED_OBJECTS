@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="Microsoft SQL Server" description="target JDBC new connection for LIFEPRO" name="JH_CONN_TGT_JDBC_LIFEPRO_dblifeprorerate01_AZWDBNJHISQLM1">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Database name" value="dbCLTCrptD01"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Use DSN" value="false"/>
+    <ConnectionProperty name="Use trusted connection" value="false"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="TDM_Developers"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:sqlserver://10.224.38.29:1433;SelectMethod=cursor;databaseName=dbCLTCrptD01;domain=mfcgd.com;AuthenticationMethod=ntlm2java"/>
+    <ConnectionProperty name="Connection Environment SQL" value="SET QUOTED_IDENTIFIER ON"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="katiysh"/>
+    <ConnectionProperty name="Username" value="SVCTDMID"/>
+    <ConnectionProperty name="Connect String" value="dbCLTCrptD01@AZWDBNINSPRMD01"/>
+    <ConnectionProperty name="Packet size" value="0"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="Yo9HA2qtvdpHPOQClRjVdA=="/>
+    <ConnectionProperty name="Server name" value="AZWDBNINSPRMD01"/>
+  </Connection>
+</Connections>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="DB2" description="For DCIRD03 in server AZULVSASDB2D08 ,50513" name="JH_CONN_DIME_CDL_DZ_DCIRD03">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="TDM_Developers"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:db2://AZULVSASDB2D08.mfcgd.com:50513;databaseName=DCIRD03;EncryptionMethod=SSL;AuthenticationMethod=encryptedPassword;TrustStore=/opt/informatica/pc102/db2_ssl/sslkeys/Azud08_incird02.jks;TrustStorePassword=DManu$lif3dEv;logTName=yes;timestamp=yes)"/>
+    <ConnectionProperty name="DB2 Native" value="Native"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="mukhesh"/>
+    <ConnectionProperty name="Username" value="SVCTDMID"/>
+    <ConnectionProperty name="Custom Driver Name" value="com.informatica.jdbc.db2.DB2Driver"/>
+    <ConnectionProperty name="Connect String" value="DCIRD03"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="7-bit ASCII"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="Yo9HA2qtvdpHPOQClRjVdA=="/>
+  </Connection>
+</Connections>

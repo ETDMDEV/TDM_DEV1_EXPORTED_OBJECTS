@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="DB2" description="GLTTGZ10 : Checking connection GLTTGZ10" name="JH_CONN_CARE_CHECK_GLTTGZ10">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:db2://10.234.30.23:50505;databaseName=GLTTGZ10 ;AuthenticationMethod=encryptedPassword"/>
+    <ConnectionProperty name="DB2 Native" value="Native"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="rajrish"/>
+    <ConnectionProperty name="Username" value="mfcgd\svctdmid"/>
+    <ConnectionProperty name="Connect String" value="GLTTGZ10"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="9J26917oMeXryuC5kUI3OA=="/>
+  </Connection>
+</Connections>

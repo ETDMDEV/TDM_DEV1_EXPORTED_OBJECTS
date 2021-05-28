@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="Microsoft SQL Server" description="Test connection PASS db - SWAROOP" name="JH_CONN_KANA_PASS_TRGT_JDBC_CONN">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Database name" value="ResponseMSK"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Use trusted connection" value="false"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:sqlserver://azsqljhkanad02.database.windows.net:1433;SelectMethod=cursor;databaseName=ResponseMSK;EncryptionMethod=SSL;ValidateServerCertificate=false;"/>
+    <ConnectionProperty name="Connection Environment SQL" value="SET QUOTED_IDENTIFIER ON"/>
+    <ConnectionProperty name="Use Parameter in Password" value="false"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="rajrish"/>
+    <ConnectionProperty name="Username" value="svcTDMid@azsqljhkanad02.database.windows.net"/>
+    <ConnectionProperty name="Connect String" value="KANA_azsqljhkanad02_Tgt_INFA"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="true"/>
+    <ConnectionProperty name="Packet size" value="512"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="USE_KERBEROS_AUTHENTICATION" value="false"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="sYpltf8tuJbxwEQqDnjX0g=="/>
+    <ConnectionProperty name="Server name" value="azsqljhkanad02.database.windows.net"/>
+  </Connection>
+</Connections>

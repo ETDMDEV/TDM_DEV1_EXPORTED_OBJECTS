@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="DB2" description="" name="TEST_CONN_DIME_DB2">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Connection Environment SQL" value=""/>
+    <ConnectionProperty name="Type" value="DB2"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Transaction Environment SQL" value=""/>
+    <ConnectionProperty name="OWNER_USERNAME" value="mandtan"/>
+    <ConnectionProperty name="Username" value="svctdmid"/>
+    <ConnectionProperty name="Connect String" value="AZDIME02"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="TDM_Developers"/>
+    <ConnectionProperty name="Name" value="TEST_CONN_DIME_DB2"/>
+  </Connection>
+</Connections>

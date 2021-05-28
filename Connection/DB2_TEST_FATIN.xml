@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="DB2" description="" name="DB2_TEST_FATIN">
+    <ConnectionProperty name="Connection Environment SQL" value=""/>
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Type" value="DB2"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Transaction Environment SQL" value=""/>
+    <ConnectionProperty name="OWNER_USERNAME" value="velamsi"/>
+    <ConnectionProperty name="Username" value="ahmadfa"/>
+    <ConnectionProperty name="Connect String" value="DMASKD1"/>
+    <ConnectionProperty name="Code Page" value="UTF-8 encoding of Unicode"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="Name" value="DB2_TEST_FATIN"/>
+  </Connection>
+</Connections>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="Microsoft SQL Server" description="" name="connection1">
+    <ConnectionProperty name="Domain name" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Database name" value="dev04"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Use trusted connection" value="false"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="Name" value="connection1"/>
+    <ConnectionProperty name="Connection Environment SQL" value=""/>
+    <ConnectionProperty name="Type" value="Microsoft SQL Server"/>
+    <ConnectionProperty name="Transaction Environment SQL" value=""/>
+    <ConnectionProperty name="OWNER_USERNAME" value="Administrator"/>
+    <ConnectionProperty name="Username" value="InfaLifePro"/>
+    <ConnectionProperty name="Connect String" value="JHLIFT52@dev04"/>
+    <ConnectionProperty name="Packet size" value="0"/>
+    <ConnectionProperty name="Code Page" value="UTF-8 encoding of Unicode"/>
+    <ConnectionProperty name="Server name" value="JHLIFT52"/>
+  </Connection>
+</Connections>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="Oracle" description="" name="tdmdev_prof_cnx">
+    <ConnectionProperty name="JDBC_URL" value="jdbc:informatica:oracle://AZULVSASORAD08.mfcgd.com:1956;SID=TDMDEV"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="Administrator"/>
+    <ConnectionProperty name="Username" value="pc_dev_prof"/>
+    <ConnectionProperty name="Connect String" value="tdmdev"/>
+    <ConnectionProperty name="Code Page" value="ISO 8859-1 Western European"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="/ySmguIHn4Vp/b3g74PnhA=="/>
+  </Connection>
+</Connections>

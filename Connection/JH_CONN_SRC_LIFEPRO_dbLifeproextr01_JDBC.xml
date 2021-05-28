@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="Microsoft SQL Server" description="" name="JH_CONN_SRC_LIFEPRO_dbLifeproextr01_JDBC">
+    <ConnectionProperty name="Domain name" value=""/>
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="Database name" value="dbLifeproextr01"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="Use trusted connection" value="false"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty name="Name" value="JH_CONN_SRC_LIFEPRO_dbLifeproextr01_JDBC"/>
+    <ConnectionProperty name="Connection Environment SQL" value=""/>
+    <ConnectionProperty name="Type" value="Microsoft SQL Server"/>
+    <ConnectionProperty name="Transaction Environment SQL" value=""/>
+    <ConnectionProperty name="OWNER_USERNAME" value="velamsi"/>
+    <ConnectionProperty name="Username" value="svcTDMid"/>
+    <ConnectionProperty name="Connect String" value="B04SQLD44@dbLifeproextr01"/>
+    <ConnectionProperty name="Packet size" value="0"/>
+    <ConnectionProperty name="Code Page" value="MS Windows Latin 1 (ANSI), superset of Latin1"/>
+    <ConnectionProperty name="Server name" value="B04SQLD44"/>
+  </Connection>
+</Connections>

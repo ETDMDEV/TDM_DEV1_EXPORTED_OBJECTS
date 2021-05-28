@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Connections xmlns="http://www.informatica.com/ilm/pdmds/xml/model">
+  <Connection connectionType="ODBC" description="PROTRAK_MOD_TGT_CONN" name="JH_CONN_ODBC_TGT_PROTRAK_B04SQLM54_dbPTKp1">
+    <ConnectionProperty name="Connection Retry Period" value="0"/>
+    <ConnectionProperty name="ODBC Provider" value="ms-sql-server"/>
+    <ConnectionProperty name="OWNER_DOMAIN" value="AZ_TDM_Dev_Domain"/>
+    <ConnectionProperty name="OWNER_USERNAME" value="kusunit"/>
+    <ConnectionProperty name="Username" value="svcTDMid"/>
+    <ConnectionProperty name="Connect String" value="dbPTKp1_B04SQLM54"/>
+    <ConnectionProperty name="Passthrough Security Enabled" value="false"/>
+    <ConnectionProperty name="Code Page" value="UTF-8 encoding of Unicode"/>
+    <ConnectionProperty name="OWNER_NAMESPACE" value="Native"/>
+    <ConnectionProperty isEncrypted="true" name="Password" value="yZFdF1W+/tKmpUSBrXUknQ=="/>
+  </Connection>
+</Connections>
